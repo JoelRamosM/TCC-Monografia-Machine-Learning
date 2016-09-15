@@ -22,7 +22,7 @@
 ########################################################################
 
 filename=documento
-
+output = output_result
 all: compile
 	
 compile:
@@ -32,17 +32,22 @@ compile:
 	@echo "*                                                       *"
 	@echo "*********************************************************"
 	@echo "Compilando..."
-	pdflatex $(filename).tex
-	bibtex $(filename)
-	makeglossaries $(filename)
-	makeindex $(filename)
-	pdflatex $(filename).tex
-	pdflatex $(filename).tex
+	
+	
+	pdflatex  $(filename).tex
+	bibtex  $(filename)
+	makeglossaries  $(filename)	
+	makeindex  $(filename)	
+	pdflatex  $(filename).tex
+	@echo "Moving to " $(output)
+	@cp $(filename).* $(output)
+	@rm -f $(output)/$(filename).tex
+	@rm -f $(filename).pdf
+	@rm -f *.out *.aux *.alg *.acr *.dvi *.gls *.log *.bbl *.blg *.ntn *.not *.lof *.lot *.toc *.loa *.lsg *.nlo *.nls *.ilg *.ind *.ist *.glg *.glo *.xdy *.acn *.idx *.loq *~
 	@echo "Processo finalizado com sucesso!"
 
-	
 clean:
+	
 	@echo -n "Limpando arquivos auxiliares...\n"
-	@rm -f *.out *.aux *.alg *.acr *.dvi *.gls *.log *.bbl *.blg *.ntn *.not *.lof *.lot *.toc *.loa *.lsg *.nlo *.nls *.ilg *.ind *.ist *.glg *.glo *.xdy *.acn *.idx *.loq *~
-	@rm -f $(filename).pdf
+	@rm -f $(output)/*.*	
 	@echo "Processo finalizado com sucesso!"
