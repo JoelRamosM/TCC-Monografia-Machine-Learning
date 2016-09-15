@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Customizações do abnTeX2 (http://abnTeX2.googlecode.com)           %%
+%% Customizações do abnTeX2 (http://.googlecode.com)           %%
 %% para a Universidade Estadual do Ceara - UECE                       %%
 %%                                                                    %%
 %% This work may be distributed and/or modified under the             %% 
@@ -28,6 +28,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%             Definições              %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand{\sfdefault}{phv} % Arial
+
 
 % Importa o arquivo com as entradas do glassario
 \input{elementos-pos-textuais/glossario}
@@ -73,7 +76,7 @@
 \setafterparaskip{\onelineskip}
 
 % Define a distância da margem esquerda do parágrafo
-\setlength{\parindent}{2cm}
+\setlength{\parindent}{1cm}
 
 % Estilo do chapter 1
 \renewcommand{\ABNTEXchapterfont}{\bfseries}
@@ -1330,7 +1333,7 @@
 	\imprimirpaginaapendices
 	\apendices %
 	% Retira o negrito da palavra "Apendice"
-	\PRIVATEapendiceconfig{\normalfont\apendicename}{\normalfont\apendicesname} %
+	%\PRIVATEapendiceconfig{\normalfont\apendicename}{\normalfont\apendicesname} %
 	
 }
 
@@ -1442,32 +1445,32 @@
 \setlength{\cftbeforechapterskip}{0pt}
 
 %\renewcommand\cftchapterfont{\normalsize}
-\renewcommand\cftsectionfont{\normalsize\normalfont}
-\renewcommand\cftsubsectionfont{\normalsize}
-\renewcommand\cftsubsubsectionfont{\normalsize\normalfont}
+%\renewcommand\cftsectionfont{\normalsize\normalfont}
+\renewcommand\cftsubsectionfont{\itshape}
+\renewcommand\cftsubsubsectionfont{\itshape}
 % Altera a fonte da seção quinária
 \renewcommand*{\cftparagraphfont}{\normalsize\normalfont\itshape}
 
 % Páginas do sumário não podem ser negrito.
 \renewcommand\cftchapterpagefont{\normalfont}
-\renewcommand\cftsectionpagefont{\normalfont}
-\renewcommand\cftsubsectionpagefont{\normalfont}
+%\renewcommand\cftsectionpagefont{\normalfont}
+%\renewcommand\cftsubsectionpagefont{\normalfont}
 % Altera a fonte da seção quinária
-\renewcommand\cftparagraphpagefont{\normalfont}
+%\renewcommand\cftparagraphpagefont{\normalfont}
 
 % Secao Secundaria (Section): Caixa alta, Não Negrito, tamanho 12
-\makeatletter
-\let\oldcontentsline\contentsline
-\def\contentsline#1#2{%
-	\expandafter\ifx\csname l@#1\endcsname\l@section %
-	\expandafter\@firstoftwo %
-	\else %
-	\expandafter\@secondoftwo %
-	\fi %
-	{%
-		\oldcontentsline{#1}{\MakeTextUppercase{#2}}%
-	}{%
-	\oldcontentsline{#1}{#2}%
-}%
-}
-\makeatother
+%\makeatletter
+%\let\oldcontentsline\contentsline
+%\def\contentsline#1#2{%
+%	\expandafter\ifx\csname l@#1\endcsname\l@section %
+%	\expandafter\@firstoftwo %
+%	\else %
+%	\expandafter\@secondoftwo %
+%	\fi %
+%	{%
+%		\oldcontentsline{#1}{#2}%
+%	}{%
+%	\oldcontentsline{#1}{#2}%
+%}%
+%}
+%\makeatother
