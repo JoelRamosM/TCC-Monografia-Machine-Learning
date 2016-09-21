@@ -39,6 +39,7 @@ compile:
 	makeglossaries  $(filename)	
 	makeindex  $(filename)	
 	pdflatex  $(filename).tex
+	pdflatex  $(filename).tex
 	@echo "Moving to " $(output)
 	@cp $(filename).* $(output)
 	@rm -f $(output)/$(filename).tex
