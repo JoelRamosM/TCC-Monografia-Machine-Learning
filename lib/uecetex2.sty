@@ -224,9 +224,10 @@
 
 \newcommand{\artigoorientador}{ %
 	\ifthenelse{\boolean{uecetex2@orientadorfeminino}}{ %
-		\unskip Orientadora\ignorespaces%
+		\unskip \textbf{Orientadora}\ignorespaces%
 	}{ %
-		\unskip Orientador\ignorespaces%
+	
+		\unskip \textbf{Orientador}\ignorespaces%
 	} %
 }
 
@@ -498,7 +499,7 @@
 }
 
 \newcommand{\preambulotccgraduacao}{
-	Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em \imprimirgraduacaoem\ da \imprimiries, como requisito parcial à obtenção do grau de \imprimirhabilitacao\ em \imprimirgraduacaoem. \\
+	Monografia apresentada à Coordenação do Curso de Graduação \imprimirgraduacaoem\ do \imprimiries, como requisito para obtenção do Título de Bacharel em Sistemas de Informação.	
 }
 
 \newcommand{\preambulotccespecializacao}{
@@ -598,12 +599,13 @@
 		\bfseries
 
         \includegraphics[scale=0.20]{lib/logo-christus} \\
-        \vspace{0.1cm}
+        \vspace{-0.2cm}
 		\MakeUppercase{\imprimiries} \\
 		%\MakeUppercase{\imprimircentro} \\
+		\vspace{-0.2cm}
 		\MakeUppercase{Curso de #1 em #2} \\
-
-		\vspace{\onelineskip}
+		
+		\vspace{4cm}
 
 		\MakeUppercase{\imprimirautor}
 		
@@ -642,21 +644,21 @@
 \makeatletter
 \renewcommand{\folhaderostocontent}{
 	\begin{center}
-		\normalsize\MakeUppercase\imprimirautor\par
-		\vspace{6.5cm}\par
-		\normalsize\MakeUppercase\imprimirtitulo
+		\bfseries\MakeUppercase\imprimirautor\par
+		\vspace{6.5cm}\par		
+		\bfseries\MakeUppercase\imprimirtitulo
 	\end{center}
 	
 	\vspace{2.5cm}
 	
 	%Retira o espaço do parágrafo
-	\hspace*{-2cm}
+	\hspace*{-4cm}
 	%Adiciona o espaço da margem
 	\hspace*{8cm}	
-	\begin{minipage}{8cm}
+	\begin{minipage}{11cm}
 		\begin{SingleSpace}
 			\imprimirpreambulo	
-			\newline
+			\newline				
 			\artigoorientador: \ignorespaces\imprimirorientador \\
 			\abntex@ifnotempty{\imprimircoorientador}{
 				\newline
@@ -667,8 +669,8 @@
 	
 	\vfill
 	\centering
-	\normalsize\MakeUppercase\imprimirlocal \par
-	\normalsize\imprimirdata	
+	\bfseries\normalsize\MakeUppercase\imprimirlocal \par
+	\bfseries\normalsize\imprimirdata	
 }
 \makeatother
 
