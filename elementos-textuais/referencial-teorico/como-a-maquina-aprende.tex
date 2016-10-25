@@ -60,9 +60,9 @@ Existem vários tipos de modelos, alguns deles são:
 \end{alineascomponto} 
 
 A escolha do modelo não é feita pelo sitema de aprendizagem, depende do tipo da tarefa \textbf{\textit{T}} e o tipo dos dados
-que estão sendo analisados. A etapa que gera um modelo específico de um conjunto de dados é chamada de treino do modelo \textbf{\textit{E}}. 
-Quando um modelo é treinado, os dados são transformado em uma forma abstrata que resume os dados originais, é importante observar que o  
-treino do modelo não gera novos dados, muitas vezes após esta etapa nos surpreendemos com as teorias levantas sobre como 
+que estão sendo analisados. A etapa que gera um modelo específico de um conjunto de dados é chamada de treino de dados \textbf{\textit{E}}. 
+Durante o treinamento, os dados são transformado em uma forma abstrata que resume os dados originais, é importante observar que o  
+treino de dados não gera novos dados, muitas vezes após esta etapa nos surpreendemos com as teorias levantas sobre como 
 estes dados se relacionam. Estas relações identificadas sempre estiveram presente, porém quando organizamos estes dados de outra forma
 é possível identificar estas conexões escondidas.
 
@@ -74,24 +74,44 @@ O processo de generalização transforma o conhecimento abstrato prévio em um f
 processo difícil de ser descrito, mas pode ser visto como uma busca nos modelos ou teorias geradas no processo de abstração, porém pode existir
 um grande número de modelos disponíveis.
 
-Dado que exista um grande número de teorias, durante a generalização este número será reduzido de forma qualitativa. 
-Mas não é praticável examinar cada uma das teorias e verificar se será util, portanto os algoritmos de machine learning utilizam 
-técnicas de busca como heurística \footnote{\cite{heuristica}A pesquisa por heurísticas é uma pesquisa realizada por meio da quantificação de proximidade a um determinado objetivo. 
-Diz-se que se tem uma boa (ou alta) heurística se o objecto de avaliação está muito próximo do objetivo; diz-se de má (ou baixa) 
-heurística se o objeto avaliado estiver muito longe do objetivo. Etimologicamente a palavra heurística vem da palavra grega Heuriskein, que significa descobrir (e que deu origem também ao termo Eureca).} 
-ou palpites para diminuir a área de busca para encontrar os modelos mais importantes. Porém como a heurística trabalha com proximidade, 
-não há garantias de que  que os melhores modelos serão escolhidos, no entanto é impraticável realizar esta pesquisa sem utilizar está técnica.
-
-A heurística aplicada em aprendizagem de máquina as vezes resulta em conclusões erradas, se estas conclusões constantemente 
-forem imprecisas, é necessário incluir uma tendência no algoritmo, algo como um pré-conceito sobre oque ele procura. Por exemplo 
-dado um algoritmo que identifica rostos em imagens, ele procura por dois circulos(os olhos) em cima da linha da boca, logo isto 
-pode ser considerado uma tendência, que causara problemas ao tentar reconhecer um rosto com óculos, rostos de perfil, com tons 
-de pele mais escuros ou outras caracteristicas que não compreendem o modelo. É possivel incluir têndencias para que o algoritmo de 
-um peso maior para olhos claros ou rostos com barbas. Porém pode ser um desafio identificar qual caracteristica terá mais peso que 
-a outra no modelo escolhido. Contudo estas tendências são um mal necessário.
+Dado que exista um grande número de modelos, durante a generalização este número será reduzido de forma qualitativa. 
+Mas não é praticável examinar cada um dos modelos e verificar se atende aos prâmetros, portanto os algoritmos de machine learning utilizam 
+técnicas de busca como heurística para diminuir a área de busca para encontrar os modelos que mais se aproximam do esperado. \cite{heuristica}A pesquisa por heurísticas é uma pesquisa 
+realizada por meio da quantificação de proximidade a um determinado objetivo. Diz-se que se tem uma boa (ou alta) heurística se o objeto de avaliação está muito 
+próximo do objetivo; diz-se de má (ou baixa) heurística se o objeto avaliado estiver muito longe do objetivo. 
+Etimologicamente a palavra heurística vem da palavra grega Heuriskein, que significa descobrir (e que deu origem também ao termo Eureca). 
+Porém como a heurística trabalha com proximidade, não há garantias de que os melhores modelos serão escolhidos, 
+no entanto é impraticável realizar esta pesquisa sem utilizar está técnica.
 
 \subsubsection{Avaliando o sucesso da aprendizagem}
 \label{cap:avaliando-generalização-dados}
+
+A heurística aplicada em aprendizagem de máquina as vezes resulta em modelos errados, se os modelos constantemente 
+forem imprecisos, é necessário incluir tendências no algoritmo e utilizar técnicas estatísticas como \textbf{bias} e \textbf{variância}.
+Por exemplo dado um algoritmo que identifica rostos em imagens, ele procura por dois circulos (os olhos) em cima de uma linha (a boca), oque pode 
+ser considerado uma tendência, ao treinar os dados será utilizado varias imagens com diversas formas de rosto, com oculos, com barba, olhando para o lado, etc.
+Após o treino teremos vários outros modelos para a mesma finalidade, logo devemos poder medir o quanto estes modelos 
+se diferenciam da tendência e entre si. Neste caso conseguimos ter dois parâmetros de erro de modelo:
+
+\begin{alineas}
+	\item Bias: é a diferença entre o valor das tendências e os valores reais. Em suma bias está relacionado a capacidade de um modelo
+				se ajustar aos dados .
+	\item Variância: é a variabilidade dos modelos. Está relacionada a capacidade do modelo se ajustar à novos dados.  
+\end{alineas}   
+
+Matematicamente, se nossa função real é \textit{Y = f(X) + E}, e queremos estimar um modelo \textit{h(x)} que aproxima a função \textit{f(x)},
+o bias (1) e a variância (2) serão, respectivamente:
+\begin{figure}[h!]
+	\centering
+	\Caption{\label{fig:bias-func} Modelo matemático: Bias e Variância}	
+	\UECEfig{}{
+		\fbox{\includegraphics[width=10cm]{figuras/bias-variance}}
+	}{
+		\Fonte{\url{https://ericcouto.wordpress.com/2013/06/29/bias-vs-variancia-parte-1/}}		
+	}	
+\end{figure}
+
+
 A última etapa da generalização é determinar o sucesso dos modelos, depois de treinado com os dados iniciais
 o modelo é testado em novos dados e avaliado como o processo de generalização se comporta, é importante ter em mente que é extremamente raro
 que o modelo atenda perfeitamente todos os casos imprevistos.
