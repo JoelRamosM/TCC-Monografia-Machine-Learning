@@ -27,7 +27,7 @@ Todo este processo ocorre na ordem apresentada, pois o conceito de abstração e
 Durante a abstração os dados de entradas, são preparados para que possuam algum sentido em um contexto.
 Para ilustrar este processo, lembre de quando aprendeu a executar operações de soma e subtração, que sua professora apresentou o exemplo:
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\Caption{\label{fig:exemplo-aprendizagem} Uma maçã mais outra maçã é igual à duas maçãs.}	
 	\UECEfig{}{
@@ -40,7 +40,7 @@ Para ilustrar este processo, lembre de quando aprendeu a executar operações de
 Você ignorou todas as propriedades da maçã como ser uma fruta, ter a cor vermelha  ou possuir sementes, e focou nas propriedades que faziam sentido no contexto, que é a maçã representar uma unidade. Logo uma unidade de um tipo mais outra unidade do mesmo tipo é igual à duas unidades, ou seja para o contexto de soma não importa se é uma fruta ou a cor e sim a unidade. Após o processo de abstração formou-se a seguinte ideia:
 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\Caption{\label{fig:exemplo-aprendizagem} Exemplo soma com maçãs após o processo de abstração.}	
 	\UECEfig{}{
@@ -62,7 +62,7 @@ Existem vários tipos de modelos, alguns deles são:
 A escolha do modelo não é feita pelo sitema de aprendizagem, depende do tipo da tarefa \textbf{\textit{T}} e o tipo dos dados
 que estão sendo analisados. A etapa que gera um modelo específico de um conjunto de dados é chamada de treino de dados \textbf{\textit{E}}. 
 Durante o treinamento, os dados são transformado em uma forma abstrata que resume os dados originais, é importante observar que o  
-treino de dados não gera novos dados, muitas vezes após esta etapa nos surpreendemos com as teorias levantas sobre como 
+treino de dados não gera novos dados, muitas vezes após esta etapa nos surpreendemos com as suposições levantadas sobre como 
 estes dados se relacionam. Estas relações identificadas sempre estiveram presente, porém quando organizamos estes dados de outra forma
 é possível identificar estas conexões escondidas.
 
@@ -89,7 +89,7 @@ no entanto é impraticável realizar esta pesquisa sem utilizar está técnica.
 A heurística aplicada em aprendizagem de máquina as vezes resulta em modelos errados, se os modelos constantemente 
 forem imprecisos, é necessário incluir tendências no algoritmo e utilizar técnicas estatísticas como \textbf{bias} e \textbf{variância} para identificar os erros.
 Por exemplo dado um algoritmo que identifica rostos em imagens, ele procura por dois circulos (os olhos) em cima de uma linha (a boca), oque pode 
-ser considerado uma tendência, ao treinar os dados será utilizado varias imagens com diversas formas de rosto, com oculos, com barba, olhando para o lado, etc.
+ser considerado uma tendência, ao treinar os modelos será utilizado varias imagens com diversas formas de rosto, com oculos, com barba, olhando para o lado, etc.
 Após o treino teremos vários outros modelos para a mesma finalidade, logo devemos poder medir o quanto estes modelos 
 se diferenciam da tendência e entre si. Neste caso conseguimos ter dois parâmetros de erro de modelo:
 
@@ -101,7 +101,7 @@ se diferenciam da tendência e entre si. Neste caso conseguimos ter dois parâme
 
 Matematicamente, se nossa função real é \textit{Y = f(X) + E}, e queremos estimar um modelo \textit{h(x)} que aproxima a função \textit{f(x)},
 o bias (1) e a variância (2) serão, respectivamente:
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\Caption{\label{fig:bias-func} Modelo matemático: Bias e Variância}	
 	\UECEfig{}{
