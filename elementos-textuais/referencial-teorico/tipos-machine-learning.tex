@@ -14,7 +14,7 @@ ser fraudulenta.
 
 Aprendizagem supervisionada é mais apropriada e mais usada em aplicações que utilizão dados historicos para realizar predições. 
 Basicamente utiliza-se padrões de dados rotulados para predizer novos dados não rotulados. 
-Os métodos mais utilizados são \textbf{classificação}, \textbf{regressão} e \textbf{predição}.
+Os métodos mais utilizados são \textbf{classificação}, \textbf{regressão} ou \textbf{predição numérica}.
 
 O principal objetivo da aprendizagem supervisionada é construi um classificador que possa identificar a classe de novos dados apartir
 do treinamento em exemplos rotulados.     
@@ -67,22 +67,30 @@ Ilustrando o exemplo de transações de cartão de crédito fraudulentas, dado q
 
 Existem alguns algoritmos de classificação muito utilizados como  \textbf{arvore de decisões} e \textbf{Classificação por regras}.
 
+\subsubsection{Classificação com Árvore de decisões}
+\label{subsubsec:decision-tree}
+Este algoritmo tem com objetivo particionar em classes de forma recursiva os exemplos rotulados, é importante lembrar que este método
+utiliza tanto atributos discretos quanto recursivos para classificar. Alguns algoritimos como ID3, ASSISTANT, CART E C4.5 são utilizados para construção destas árvores.
+
+Os algoritmos de construçao de árvores de decisão tomam como base  os critérios de dividir para conquistar para construir a árvore e o critério guloso para escolha dos melhores atributos e partições.    
+
+
 
 \subsubsection{Regressão}
 \label{subsubsec{regressao}}
-Regressão assim como em classicação utiliza de exemplos rotulados para treino, porém em regressão estes rótulos são baseados em atribudos com valores contínuos, 
+Regressão assim como em classicação utiliza de exemplos rotulados para treino, porém estes rótulos são baseados em atribudos com valores contínuos, 
 diz-se que um atributo é contínuo quando assume qualquer valor numéricos presente em um conjunto infinito em uma determinada escala, por exemplo o preço de uma casa, 
 pode ser R\$300.000,00 ou R\$890.092,00. Seu objetivo é identificar um modelo de curva ou uma função linear \textit{y = f(x)}, com base
-em parâmetros conhecidos dos exemplos de treino, para prever o valor do atributo rotulado em novos dados.
+em parâmetros conhecidos dos exemplos de treino, para prever o valor do \textbf{rótulo} em novos dados.
 Por exemplo dado um conjunto de dados de treino que diz respeito à um imóvel, pretende-se identificar um modelo para poder predizer
-o preço de imóveis com base em seu tamanho:
+o preço de imóveis:
 
 \begin{table}[h!]
 	\Caption{\label{dados-imoveis} Exemplos rotulado de dados de imóveis}
 	\IBGEtab{}{
 		\begin{tabular}{rr}
 			\toprule
-			Área $m^{2}$ & Preco(R\$) \\
+			Área ($m^{2}$) & Preco (R\$) \\
 			\midrule \midrule
 			192,00  &        250.000,00  \\
 			140,55  &        187.000,00  \\
@@ -98,5 +106,18 @@ o preço de imóveis com base em seu tamanho:
     \Fonte{Produzido pelo autor}
 	\Nota{A coluna preço é o rótulo de cada exemplo.}	
 }
-\end{table}
+\end{table} 
 
+Pretende-se identificar um modelo que ao aplicar um novo imóvel com área de \textit{x $m^2$} me retorne o seu possível valor. A figura ~\ref{fig:regressao-plano-cartesiano} ilustra 
+o modelo de regressão deste caso, que é basicamente um função linear \textit{y = f(x)}, onde \textbf{\textit{y}} seria o valor que estamos tentando inferir e \textbf{\textit{x}} é o parâmetro 
+conhecido que será utilizado, neste caso a área do imóvel.
+
+\begin{figure}[ht!]
+	\centering
+	\Caption{\label{fig:regressao-plano-cartesiano} }	
+	\UECEfig{}{
+		\fbox{\includegraphics[width=12cm]{figuras/regressao-plano-predicao-imovel}}
+	}{
+		\Fonte{Elaborado pelo autor}		
+	}	
+\end{figure}
