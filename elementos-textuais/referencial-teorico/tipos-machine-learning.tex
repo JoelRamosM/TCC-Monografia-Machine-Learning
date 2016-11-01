@@ -67,14 +67,31 @@ Ilustrando o exemplo de transações de cartão de crédito fraudulentas, dado q
 
 Existem alguns algoritmos de classificação muito utilizados como  \textbf{arvore de decisões} e \textbf{Classificação por regras}.
 
+
 \subsubsection{Classificação com Árvore de decisões}
 \label{subsubsec:decision-tree}
 Este algoritmo tem com objetivo particionar em classes de forma recursiva os exemplos rotulados, é importante lembrar que este método
-utiliza tanto atributos discretos quanto recursivos para classificar. Alguns algoritimos como ID3, ASSISTANT, CART E C4.5 são utilizados para construção destas árvores.
+utiliza tanto atributos discretos quanto recursivos para classificar. Alguns algoritimos como ID3, ASSISTANT, CART E C4.5 
+são utilizados para construção destas árvores de decisão.
 
-Os algoritmos de construçao de árvores de decisão tomam como base  os critérios de dividir para conquistar para construir a árvore e o critério guloso para escolha dos melhores atributos e partições.    
+Árvores de decisão são facilmente representadas por um fluxograma com a estrutura de uma árvore, onde o ponto de partida é chamado de nó raiz,
+além do nó raiz temos os nós terminais e não terminais também conhecidos como ramos e folhas. Posto que os nós não-terminais/ramos se divide em nós filhos,
+e está divisão é dada por uma condição sobre o valor de um atributo de um exemplo, enquanto que os nós terminais/folhas não se dividem, ele atribui uma classe ao exemplo.
 
+Dado uma árvore de decisão utilizada para classificar pacientes doentes e saudáveis:
 
+\begin{figure}[ht!]
+	\centering
+	\Caption{\label{fig:ex-arvore} }	
+	\UECEfig{}{
+		\fbox{\includegraphics[width=12cm]{figuras/ex-arvore-decisao}}
+	}{
+		\Fonte{Elaborado pelo autor}		
+	}	
+\end{figure}
+
+Ao submeter um conjunto de dados de uma paciente com os seguintes atributos {Se sente bem: S, Paciente Sente Dor: N, Temperatura: 38}, 
+este exemplo será classificado como doente por conta das regras aplicadas durante o fluxo.
 
 \subsubsection{Regressão}
 \label{subsubsec{regressao}}
