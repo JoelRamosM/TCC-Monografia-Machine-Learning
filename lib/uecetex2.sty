@@ -849,59 +849,62 @@
 
 \newcommand{\imprimirfolhadeaprovacaotcc}{
 
-	\begin{center}
-		\MakeUppercase{\imprimirautor}\par
-		\vspace{\onelineskip}
-		\vspace{\onelineskip}
-		\MakeUppercase{\imprimirtitulo}
+	\begin{center}		
+		\bfseries\MakeUppercase{\imprimirautor}\par
+		\vspace{\onelineskip}		
+		\bfseries\MakeUppercase{\imprimirtitulo}
 	\end{center}
 	
 	\vspace{\onelineskip}
-	\vspace{\onelineskip}
 	
-	%Retira o espaço do parágrafo
-	\hspace*{-2cm}
+	%Retira o espaço do parágrafo	
 	%Adiciona o espaço da margem
-	\hspace*{8cm}	
-	\begin{minipage}{8cm}
-		\begin{SingleSpace}
-			\imprimirpreambulo \\			
-		\end{SingleSpace}		
-	\end{minipage}
+	
+		Esta monografia foi submetida à Coordenação do Curso de Graduação de 
+		Sistemas de Informação do Centro Universitário Christus, como parte dos requisitos 
+		necessários à obtenção do título de Bacharel em Sistemas de Informação e 
+		encontra-se à disposição dos interessados na Biblioteca do referido Centro 
+		Universitário.	
 
 	\vspace{\onelineskip}
 		
-	\noindent Aprovada em: \imprimirdataaprovacao
-	
+		
 	\vspace{\onelineskip}
 	
-	\begin{center}
-		BANCA EXAMINADORA
-	\end{center}
-		\vspace{\onelineskip}
+	
+	
+	\noindent \bfseries{BANCA EXAMINADORA:}
+	\normalfont
+	\vspace{\onelineskip}
 
 	% Membro Um da banca é sempre o Orientador
-	\assinatura{\imprimirorientador\  \artigoorientadorcomparenteses  \\  \imprimirorientadories}
+	\assinatura{\imprimirorientador ~~(Oreintador)}
 	
+	\vspace{\onelineskip}
+	\vspace{\onelineskip}
 	% Membro Dois da banca pode ser o coorientador ou outro membro
 	\ifnotempty{\imprimircoorientador}{
-		\assinatura{\imprimircoorientador\ \artigocoorientadorcomparenteses \\ \imprimircoorientadorcentro\\ \imprimircoorientadories}
+		\assinatura{\imprimircoorientador}
 	}
 	
 	% Membro Três da banca pode ser o coorientador ou outro membro
 	\ifnotempty{\imprimirmembrodabancadois}{
-		\assinatura{\imprimirmembrodabancadois \\ \imprimirmembrodabancadoiscentro \\ \imprimirmembrodabancadoisies}
-	}
-		
-	% Membro Três da banca pode ser o coorientador ou outro membro
-	\ifnotempty{\imprimirmembrodabancatres}{
-		\assinatura{\imprimirmembrodabancatres \\ \imprimirmembrodabancatrescentro \\ \imprimirmembrodabancatresies}
+		\assinatura{\imprimirmembrodabancadois }
 	}
 	
-	% Membro Quatro da banca pode ser o coorientador ou outro membro
-	\ifnotempty{\imprimirmembrodabancaquatro}{
-		\assinatura{\imprimirmembrodabancaquatro \\ \imprimirmembrodabancaquatrocentro \\ \imprimirmembrodabancaquatroies}
-	}	
+	%\noindent Monografia aprovada em __/__/____	
+	
+	% Membro Três da banca pode ser o coorientador ou outro membro
+	\ifnotempty{\imprimirmembrodabancatres}{
+		\assinatura{\imprimirmembrodabancatres}
+	}
+	
+	\vspace*{4cm}		
+	\noindent Monografia aprovada em: 	
+	\vspace*{2cm}
+	
+	\assinatura{Coordenação do Curso de Sistemas de Informação}
+		
 	
 	\pagebreak
 }
@@ -1449,7 +1452,7 @@
 %\renewcommand\cftchapterfont{\normalsize}
 %\renewcommand\cftsectionfont{\normalsize\normalfont}
 \renewcommand\cftsubsectionfont{\itshape}
-\renewcommand\cftsubsubsectionfont{\itshape}
+\renewcommand\cftsubsubsectionfont{\normalfont\itshape}
 % Altera a fonte da seção quinária
 \renewcommand*{\cftparagraphfont}{\normalsize\normalfont\itshape}
 
