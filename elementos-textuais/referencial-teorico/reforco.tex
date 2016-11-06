@@ -1,0 +1,96 @@
+\subsection{Aprendizagem por reforço}
+\label{subsec:reforcing-learning}
+ 
+Muito semelhante a tradicional análise de dados onde o algoritmo de descoberta por tentativa e erro
+decide qual ação resulta em maior ganho, e diferente dos outros métodos de aprendizagem não utiliza exemplos para treino
+e sim trabalha com feedbacks do ambiente. de acordo com \cite{Valiant:1984:TL:1968.1972} "O número de exemplos necessários para 
+se aprender um certo conceito cresce exponencialmente de acordo com o número de atributos", por isto se utiliza este tipo de aprendizagem
+quando o é impraticavel a aprendizagem com exemplos.
+
+
+Quando se aplicada a aprendizagem por reforço é muito comum utilizar o processo de decisão de Markov (MDP). 
+Este tipo de aprendizagem possui três componentes importantes em sua aplicação:
+\begin{alineas}
+	\item O \textbf{agente}, é o responsável pelas tomadas de decisões.
+	\item O \textbf{ambiente}, é tudo com oque o agente interage.
+	\item As \textbf{ações}, é oque o agente pode fazer.
+\end{alineas}  
+ Em suma a aprendizagem por reforço tem como principal objetivo encontra uma política de ações que maximize seus ganhos(recompensa). Para ilustrar 
+ pense em um agente em um dado ambiente, onde a cada instante de tempo o agente está:   
+\begin{alineascomponto}
+	\item em um estado $x$;
+	\item executa um ação $a$;
+	\item vai para o estado $s'$; e
+	\item recebe uma recompensa $r$;
+\end{alineascomponto}
+Com isso ele consegue coletar informações para identificar qual ação resulta em uma maior recompensa,
+está recompensa é um \textit{feedback} do ambiente sobre o comportamento do agente. 
+ 
+De acordo com o MDP tambem conhecido como cadeia de Markov, uma política de ações é dada por $\pi: (S)$
+e $\pi: S \rightarrow A $, onde $S$ é um conjunto de estados e $A$ um conjunto de ações. 
+O MDP é baseado em dois conceitos fundamentais: \cite{hordijk1992} estados e transições de estado.
+Um \textbf{estado} é tido como uma variável aleatória que descreve alguns atributos, é formado por percepções do agente e deve
+prover informações para o agente de quais ações podem ser executadas, como por exemplo a quantidade de pessoas em uma festa.
+E a \textbf{transição de estado} descreve uma mudança no estado em um período de tempo, 
+dado o exemplo da festa uma mudança de estado seria quando a musíca para.
+
+Uma função de recompença é dada por  $r: (S \times A) \rightarrow R$. A função $r(s,a)$ que indica a recompensa 
+recebida quando se esta em um estado $s$ e executa uma ação $a$, está pode ser determinística ou estocástica. Logo uma 
+função de trasição de estado é dada por $\delta:(S \times A) \rightarrow S $ e $\delta:(s,a)$ que indica em que 
+estado um agente está, sendo que estava em um estado $s$ e executou uma ação $a$, em um ambiente não-determinístico
+a funça é dada por $\delta:(s,a,s')$ que indica a probabilidade a probabilidade de ir para um estado $s'$ sendo que
+estava em um estado $s$ e realizou a ação $a$.
+Um bom exemplo de MDP é um agente jogador de Damas como mostra o Quadro ~\ref{qua:agente-jogador}
+
+\begin{quadro}[h!]	
+	\centering
+	\Caption{\label{qua:agente-jogador} MDP - Agente jogador de damas}		
+	\UECEqua{}{
+		{\renewcommand{\arraystretch}{2}
+		\begin{tabular}{|L{2cm} | L{2cm} | L{2cm}| L{3cm} | L{3cm}|}
+			\hline
+			Agente & Ambiente & Estados & Ações & Recompensa \\
+			\hline
+			 Jogador de Damas & Tabuleiro Damas & Posição das peças & Mover uma dada peça & (Capturas de peças - Perdas de peças) \\
+			\hline
+		\end{tabular}
+		}
+	}{
+		\Fonte{Elaborado pelo autor}
+	}
+\end{quadro}  
+
+A política de ações é responsável por modelar o comportamento de um dado agente mapeando os estados em ações, esta pode 
+ser vista como um conjunto de regras tida como $s_{n} \rightarrow a_{n}$, pode ser ilustrada como instruções de controle 
+de fluxo \textit{if}, o Algoritmo ~\ref{alg:se} apresenta algumas regras dado o exemplo de um personagem de um jogo:
+\begin{algorithm}[h!]
+	\SetSpacedAlgorithm
+	\caption{\label{alg:se}Exemplo regras política de ações}
+	\Entrada{Estado}
+	\Saida{Ação}
+	\Inicio{
+		\Se{estado = (vida em 100\%,energia em 100\%, inimigo ao alcance)}{
+			Atacar\;
+		}
+		\Se{estado = (vida < 50\%, energia em 0\%, inimigo próximo)}{
+			Fugir\;
+		}
+		...\	
+	}		
+\end{algorithm}   
+
+Posto que uma política de ações mapeia estados em ações, como determinar se um dado estado é bom ou ruim?
+A função de valor de estado expressa isto em termos de recompensas e a política de ações, basicamente representa
+uma recompensa a receber em um dado estado mais as recompensas futuras se seguir uma certa política de ações, esta
+funça é dada por $V\pi(S_{0})= r_{0}+r_{1}+r_{2}+r_{3}+ ... + r_{n}$, é importante atentar para o tempo, pois 
+se ele for infinito a função valor tende a infinito. Para garantir a convêrgencia e diferenciar recompensas distantes do
+estado atual é utilizado um fator de desconto onde $0 \leqslant \lambda \leqslant 1$  e a função de valor é dada por
+$V\pi(S_{t})= r_{t} + \gamma r_{t+1} + \gamma^{2} r_{t+2} + \gamma^{3} r_{t+3} ... \gamma^{n} r_{t+n}$, por exemplo
+se o fator $\gamma$ for 90\%, logo a função será:
+\begin{equation}
+	\begin{aligned}
+ 			V\pi(S_{t})= r_{t} + 0.9 r_{t+1} + 0.81 r_{t+2} + 0.729 r_{t+3} ... 0.9^{n} r_{t+n}
+	\end{aligned}
+\end{equation}
+Com esta função é possível determinar se um dado estado é bom ou ruim e com isso é possível ter insumos de qual
+ações tomar para maximizar a recompensa.
