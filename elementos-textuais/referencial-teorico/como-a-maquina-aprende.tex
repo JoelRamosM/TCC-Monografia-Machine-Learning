@@ -87,9 +87,11 @@ no entanto é impraticável realizar esta pesquisa sem utilizar está técnica.
 \label{subsec:avaliando-generalização-dados}
 
 A heurística aplicada em aprendizagem de máquina as vezes resulta em modelos errados, se os modelos constantemente 
-forem imprecisos, é necessário incluir tendências no algoritmo e utilizar técnicas estatísticas como \textbf{bias} e \textbf{variância} para identificar os erros.
+forem imprecisos, é necessário incluir tendências no algoritmo e utilizar técnicas estatísticas como \textbf{bias} e \textbf{variância} 
+para identificar os erros. Porém é necessário atentar para que estes ajustes não deturpem a realidade e acabe causando o \textit{overfitting}.
 Por exemplo dado um algoritmo que identifica rostos em imagens, ele procura por dois circulos (os olhos) em cima de uma linha (a boca), oque pode 
-ser considerado uma tendência, ao treinar os modelos será utilizado varias imagens com diversas formas de rosto, com oculos, com barba, olhando para o lado, etc.
+ser considerado uma tendência, ao treinar os modelos será utilizado varias imagens com diversas formas de rosto, com oculos, 
+com barba, olhando para o lado, etc.
 Após o treino teremos vários outros modelos para a mesma finalidade, logo devemos poder medir o quanto estes modelos 
 se diferenciam da tendência e entre si. Neste caso conseguimos ter dois parâmetros de erro de modelo:
 
