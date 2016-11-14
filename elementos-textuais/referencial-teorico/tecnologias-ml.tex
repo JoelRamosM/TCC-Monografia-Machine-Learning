@@ -4,7 +4,7 @@
 Machine Learning é uma área que vem sendo explorada e aprimorada a cada dia por cientistas tanto da iniciativa privada 
 como pública e acadêmica. Com a rápida evolução a cada dia são desenvolvidas novas tecnologias para o desenvolvimento
 de métodos e algoritmos de machine learning, para ilustrar melhor é possivel  dividir estas técnologias em categorias, são elas
-\textbf{linguagens de programação} e \textbf{\textit{frameworks}}, \textbf{ferramentas} e \textbf{serviços}. 
+\textbf{linguagens de programação} e \textbf{\textit{frameworks}}, \textbf{ferramentas} e \textbf{serviços na nuvem}. 
 
 \subsection{Principais linguagens de programação e frameworks}
 \label{subsec:ling-prog}
@@ -84,15 +84,76 @@ tempo. Assim como o Hadoop o Spark também estende funcionalidades do MapReduce.
 \subsection{Principais ferramentas}
 \label{subsec:ferramentas}
 Muitas vezes não é necessáro desenvolver um sitema de machine learning para que se obtenha resultados satisfátórios, pois existem
-ferramentas focadas em automatizar algumas tarefas para fazer \textbf{data-mining}, preparar os dados ou visualiza-los de formas mais 
-simples, além de ferramentas que facilitam o desenvolvimento de algortimos. 
+ferramentas focadas em automatizar algumas tarefas para fazer \textit{data-mining}, preparar os dados ou visualiza-los de formas mais 
+simples, além de ferramentas que facilitam o desenvolvimento de algortimos. Existem muitas empresas muito consolidadas no mercado 
+que fornecem este tipo de ferramenta como a \textbf{IBM}, \textbf{Oracle} e \textbf{SAP}, no entando a comunidade de desenvolvedores
+produzem ótimas ferramentas gratuitas e de código aberto, portanto é aconselhavél que antes de comprar uma ferramenta deste tipo
+avaliar se as opções gratuitas não atendem as necessidades, sabendo que os produtos proprietários são relativamente caros. Por 
+isto podemos categorizar estas ferramentas como \textbf{pagas} e \textbf{gratuitas}.
 
 
-  
+Dentre as soluções pagas, é importante citar algumas das principais:
+
+\begin{alineas}
+	\item \textbf{IBM SPSS Statistics}, é um pacote de soluções para análises de dados, possui mais de 10 módulos integrados para 
+	atender todo o processo de análise desde o planejamento e a coleta dos dados até a análise. Muitos destes módulos são focados na análise
+	preditiva, por exemplo com os dados que existente é possivel manter todo um \textit{workflow} de machine learning, para identificar padrões e relações 
+	inesperadas.
+
+	\item \textbf{SAP Predictive Analytics}, como apresentado anteriormente antes de aplicar algoritmos que analisem e gerem modelos estatisticos, deve-se 
+	preparar os dados, ou seja transformar os dados em uma forma que possa ser processado, pode ser uma tarefa repetitiva, massante e passível de erro humano, 
+	vendo isto está ferramenta automatiza estas etapas. Esta ferramenta é capaz de utilziar dados de diversas origens como aplicações, 
+	\textit{data warehouses}\footnote{TODO} e até mesmos de arquivos \textit{flats}\footnote{TODO}. 
+	Além de fornecer formas de explorar os dados visualmente, tornando mais eficiente a visualização dos resultados, como por exemplo a visualização 
+	do tamanho dos \textit{clusters}, densidade, distância, árvores de decisões entre outros. Permite também que se utilize scripts customizados 
+	esritos na linguagem \textbf{R}.
+
+	\item \textbf{SAS Analytics Suite}, é basicamente um ecosistemas de produtos focados em atender todas as etapas de machine learning, como a preparação
+	dos dados, visualização dos dados e gerenciamento dos modelos gerados. Além de ser integrada as linguagens R e Python também se intergra com o framework
+	Hadoop.	
+\end{alineas}
+
+E dentre as soluções abertas e gratuitas, algumas das principais são:
+
+\begin{alineas}
+	\item \textbf{RapidMiner} é um software livre que atende todas as etapas do \textit{workflow} de machine learning, desde a preparação dos dados até 
+	a operacionalização em ambiente de produção, em suma em um único ambiente é possivel melhorar drasticamente a performance e eficiência.
+
+	\item \textbf{Weka} possui uma coleção de algoritmos de machine learning e estes podem ser aplicados diretamente em um conjunto de dados, tembé permite
+	que aplicações Java utilizem estes algoritmos, também possui ferramentas para preparação dos dados, classificação, regressão, clusterização e visualização.
+	Este é um software sobre a licensa \textbf{GNU}(\textit{General Public License}), é uma das licensas de softwares abertos mais permissivas. 
+	Além de possuir uma interface gráfica muito intuitiva que praticamente dispensa a escrita de código, tornando o processo muito mais amigável e
+	convidativo para profissionais de diversas áreas.
+
+	\item \textbf{Rattle}, sabendo que a linguagem R atende o universo de machine learning muito bem por conta das inumeras bibliotecas, porém 
+	seu desenvolvimento e visualização dos resultados é em console de linha de comando. A ferrementa Rattle possibilita executar os algoritmos
+	em R em uma interface gráfica e visualizar o resultado dos algoritmos gráficamente.	  
+\end{alineas}
+
+
+\subsection{Serviços na nuvem}
+\label{subsec:servicos}
+Além de ferramentas e as linguagens de programação existem alguns serviços na nuvem que abstraem muita complexidade de um projeto de machine learning, 
+desde \textbf{API's} para processamento dos dados até serviços de infraestrutura como máquinas com grande poder computacional.
+Alguns serviços chegam a oferecer um \textit{setup} interativo que possibilita configurar todo o processo de machine learning em uma interface
+simples e de forma visual, ou seja sem linha de comando ou programação.
+
+
+Os principais fornecedores destes tipos de serviço são pioneiros em serviços de nuvem, são eles \textbf{Microsoft Azure} \textbf{AWS (Amazon Web Services)}, 
+ambos possuem soluções de \textbf{IaaS (Infraestrutura como Serviço)}, \textbf{PaaS (Plataforma como Serviço)} e \textbf{SaaS (Software como Serviço)}, e também
+possuem serviços focados em machine learning. São eles:
+
+\begin{alineas}
+	\item \textbf{Amazon Machine Learning}, é baseado nas mesmas tecnologias utilizadas e comprovadas pela própria Amazon, uma empresa que sempre teve vários
+	desafios em relação a escalabilidade e performance. Este produto oferce ferramentas para configurar todo o processo de ML de forma simples, não necessitando 
+	de muito conhecimento nos algoritmos complexos de ML, após a conclusão dos modelos o serviço oferece API's simples para obter predições apartir dos modelos gerados.     
+	\item \textbf{Azure Machine Learning}
+	
+\end{alineas}
 
 
 
 
 
 
-    
+
