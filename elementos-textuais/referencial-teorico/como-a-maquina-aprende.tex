@@ -1,7 +1,7 @@
-\section{Como a Máquina Aprende}
+\section{Como a máquina aprende}
 \label{sec:howdoesmachinelearn}
 
-O processo básico de aprendizagem de máquina consiste em entrada de dados, abstração e generalização.
+O processo básico de aprendizagem de máquina consiste em entrada de dados, abstração e generalização (Figura~\ref{fig:processo-aprendizagem}).
 \begin{alineas}
 	\item Entrada de dados: são fatos tirados da memoria ou da observação;
 	\item Abstração: transformar estes dados em algo mais objetivo e que faça sentido;
@@ -14,7 +14,7 @@ O processo básico de aprendizagem de máquina consiste em entrada de dados, abs
 	\UECEfig{}{
 		\fbox{\includegraphics[width=15cm]{figuras/procc-learning}}
 	}{
-		\Fonte{Elaborado pelo autor}
+		\Fonte{Autoria própria}
 	}	
 \end{figure}
 
@@ -25,7 +25,7 @@ Todo este processo ocorre na ordem apresentada, pois o conceito de abstração e
 \label{subsec:abs-representacao-dados}
 
 Durante a abstração os dados de entradas, são preparados para que possuam algum sentido em um contexto.
-Para ilustrar este processo, lembre de quando aprendeu a executar operações de soma e subtração, que sua professora apresentou o exemplo:
+Para ilustrar este processo, lembre de quando aprendeu a executar operações de soma e subtração, que sua professora apresentou (Figura ~\ref{fig:exemplo-aprendizagem}):
 
 \begin{figure}[ht!]
 	\centering
@@ -33,7 +33,7 @@ Para ilustrar este processo, lembre de quando aprendeu a executar operações de
 	\UECEfig{}{
 		\fbox{\includegraphics[width=15cm]{figuras/exemplo_soma_maca}}
 	}{
-		\Fonte{Elaborado pelo autor}
+		\Fonte{Autoria própria}
 	}	
 \end{figure}
 
@@ -42,11 +42,11 @@ Você ignorou todas as propriedades da maçã como ser uma fruta, ter a cor verm
 
 \begin{figure}[ht!]
 	\centering
-	\Caption{\label{fig:exemplo-aprendizagem} Exemplo soma com maçãs após o processo de abstração.}	
+	\Caption{\label{fig:exemplo-aprendizagem2} Exemplo soma com maçãs após o processo de abstração.}	
 	\UECEfig{}{
 		\fbox{\includegraphics[width=15cm]{figuras/exemplo_soma_maca2}}
 	}{
-		\Fonte{Elaborado pelo autor}
+		\Fonte{Autoria própria}
 	}	
 \end{figure}
 
@@ -54,16 +54,16 @@ A etapa seguinte do processo de abstração é a representação do conhecimento
 \textbf{\textit{modelo}} 
 Existem vários tipos de modelos, alguns deles são:
 \begin{alineascomponto}
-    \item Equações;
-    \item Grafos;
-    \item Estruturas de logicas de programação como: \textit{if} e \textit{else}; 
+    \item equações;
+    \item grafos;e
+    \item estruturas de lógicas de programação como: \textit{if} e \textit{else}; 
 \end{alineascomponto} 
 
-A escolha do modelo não é feita pelo sitema de aprendizagem, depende do tipo da tarefa \textbf{\textit{T}} e o tipo dos dados
+A escolha do modelo não é feita pelo sistema de aprendizagem, depende do tipo da tarefa \textbf{\textit{T}} e o tipo dos dados
 que estão sendo analisados. A etapa que gera um modelo específico de um conjunto de dados é chamada de treino de dados \textbf{\textit{E}}. 
 Durante o treinamento, os dados são transformado em uma forma abstrata que resume os dados originais, é importante observar que o  
 treino de dados não gera novos dados, muitas vezes após esta etapa nos surpreendemos com as suposições levantadas sobre como 
-estes dados se relacionam. Estas relações identificadas sempre estiveram presente, porém quando organizamos estes dados de outra forma
+estes dados se relacionam. Estas relações identificadas sempre estiveram presente, porém quando se organiza estes dados de outra forma
 é possível identificar estas conexões escondidas.
 
 \subsection{Generalização}
@@ -76,10 +76,16 @@ um grande número de modelos disponíveis.
 
 Dado que exista um grande número de modelos, durante a generalização este número será reduzido de forma qualitativa. 
 Mas não é praticável examinar cada um dos modelos e verificar se atende aos prâmetros, portanto os algoritmos de machine learning utilizam 
-técnicas de busca como heurística para diminuir a área de busca para encontrar os modelos que mais se aproximam do esperado. \cite{heuristica}A pesquisa por heurísticas é uma pesquisa 
-realizada por meio da quantificação de proximidade a um determinado objetivo. Diz-se que se tem uma boa (ou alta) heurística se o objeto de avaliação está muito 
-próximo do objetivo; diz-se de má (ou baixa) heurística se o objeto avaliado estiver muito longe do objetivo. 
-Etimologicamente a palavra heurística vem da palavra grega Heuriskein, que significa descobrir (e que deu origem também ao termo Eureca). 
+técnicas de busca como heurística para diminuir a área de busca para encontrar os modelos que mais se aproximam do esperado.
+Segundo \cite{heuristica}:
+\begin{citacao}
+A pesquisa por heurísticas é uma pesquisa realizada por meio da quantificação de proximidade a um determinado objetivo. 
+Diz-se que se tem uma boa (ou alta) heurística se o objeto de avaliação está muito próximo do objetivo; diz-se de má (ou baixa) heurística 
+se o objeto avaliado estiver muito longe do objetivo. 
+Etimologicamente a palavra heurística vem da palavra grega Heuriskein, que significa descobrir (e que deu origem também ao termo Eureca).
+\end{citacao} 
+
+
 Porém como a heurística trabalha com proximidade, não há garantias de que os melhores modelos serão escolhidos, 
 no entanto é impraticável realizar esta pesquisa sem utilizar está técnica.
 
@@ -97,7 +103,7 @@ se diferenciam da tendência e entre si. Neste caso conseguimos ter dois parâme
 
 \begin{alineas}
 	\item Bias: é a diferença entre o valor das tendências e os valores reais. Em suma bias está relacionado a capacidade de um modelo
-				se ajustar aos dados .
+				se ajustar aos dados; e
 	\item Variância: é a variabilidade dos modelos. Está relacionada a capacidade do modelo se ajustar à novos dados.  
 \end{alineas}   
 

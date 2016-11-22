@@ -1,5 +1,3 @@
-![alt tag](https://raw.githubusercontent.com/thiagodnf/uecetex2/master/figuras/uecetex2-logo.png)
-
 # O que é?
 
 O **ueceTeX2** é um projeto baseado no [abnTeX2] desenvolvido para auxiliar os alunos da Universidade Estadual do Ceará - UECE em seus trabalhos de monografias de graduação, dissertações de mestrado e teses de doutorado. Embora tenha sido escrita para ser utilizada principalmente pelos alunos da Computação, a ueceTeX2 é suficientemente configurável e facilmente adaptável para ser utilizada em praticamente todos os cursos da UECE. Espera-se que o projeto seja um modelo de trabalho acadêmico que implemente todas as exigências das normas da ABNT sem a necessidade de se preocupar com o estilo ou formatação do documento.
@@ -67,7 +65,7 @@ Veja a seguir como inserir alguns elementos no seu texto.
 			\bottomrule
 		\end{tabular}
 	}{
-		\Fonte{Elaborado pelo autor}
+		\Fonte{Autoria própria}
     }
 \end{table}
 ```
@@ -88,7 +86,7 @@ Veja a seguir como inserir alguns elementos no seu texto.
 			\hline
 		\end{tabular}
 	}{
-		\Fonte{Elaborado pelo autor}
+		\Fonte{Autoria própria}
 	}
 \end{quadro}
 ```
@@ -101,7 +99,7 @@ Veja a seguir como inserir alguns elementos no seu texto.
 	\UECEfig{}{
 	    \includegraphics[width=8cm]{figuras/figura-1}
 	}{
-	    \Fonte{Elaborado pelo autor}
+	    \Fonte{Autoria própria}
 	}	
 \end{figure}
 ```
