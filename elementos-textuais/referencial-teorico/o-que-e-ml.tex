@@ -8,7 +8,7 @@ computador é semelhante ao que ocorre com nós seres humanos, onde em suma apre
 Visto o objetivo de Machine Learning, para que um sistema possa identificar se sua performance está de fato melhorando, é preciso identificar estes três parâmetros:
  \begin{alineascomponto}
 	\item Tipo de tarefa: \textbf{\textit{T}};
-	\item Métrica de performance: \textbf{\textit{P}};e
+	\item Métrica de performance: \textbf{\textit{P}}; e
 	\item Treino para obter experiência: \textbf{\textit{E}}.			
 \end{alineascomponto}
 Por exemplo, dado um computador que deve aprender a jogar xadrez os parâmetros são: \textbf{\textit{T}}: Jogar xadrez, \textbf{\textit{P}}: quantidade de jogos ganhos contra outros jogadores e
@@ -48,19 +48,19 @@ Para se ter uma visão mais ampla sobre as possibilidade de aplicações de mach
  mudar o modo como vivemos, são elas:
 
  \begin{alineas}
-	\item \textbf{Reconhecimento de caracteres em imagens}, um exemplo muito utilizado atualmente por instituições de segurança e de trânsito, para 
-	reconhecimento de placas de veículos através de câmeras nas ruas,estradas e rodovias.  
-	\item \textbf{Reconhecimeto de formas/objetos (Visão Computacional)\footnote{\textbf{Visão computacional} é a ciência e tecnologia das máquinas que enxergam. Ela desenvolve teoria e tecnologia para a construção de sistemas artificiais que obtém informação de imagens ou quaisquer dados multi-dimensionais.\cite{vscomp}}}, está aplicação pode ser útil em vários aspectos, porém acredito que a mais importante 
+	\item \textbf{Reconhecimento de caracteres em imagens}: um exemplo muito utilizado atualmente por instituições de segurança e de trânsito, para 
+	reconhecimento de placas de veículos através de câmeras nas ruas,estradas e rodovias;  
+	\item \textbf{Reconhecimeto de formas/objetos (Visão Computacional)\footnote{\textbf{Visão computacional} é a ciência e tecnologia das máquinas que enxergam. Ela desenvolve teoria e tecnologia para a construção de sistemas artificiais que obtém informação de imagens ou quaisquer dados multi-dimensionais.\cite{vscomp}}}: está aplicação pode ser útil em vários aspectos, porém acredito que a mais importante 
 	é a melhoria na qualidade de vida de pessoas com deficiência visual, onde basicamente a pessoa usa um óculos com uma câmera a qual faz o reconhecimento do ambiente
-	e o descreve, em linguagem natural.  
-	\item \textbf{Reconhecimento de fala}, mais uma das aplicações de machine leraning de grande valia para a melhoria na qualidade de vida das pessoas,
+	e o descreve, em linguagem natural;  
+	\item \textbf{Reconhecimento de fala}: mais uma das aplicações de machine leraning de grande valia para a melhoria na qualidade de vida das pessoas,
 	levando em consideração o seu papel na inclusão tecnologica/social de pessoas com alguma deficiência motora que á impessa de interagir 
-	com interfaces por meios convencionais, como o teclado ou  mouse do computador, e dispositivos móveis com interface \textit{touchscreen}.
-	\item \textbf{Reconhecimento facial}, muito utilizada em orgão de segurança para identificar criminosos procurados ou pessoas desaparecidas.
-	\item \textbf{Diagnóstico médico}, aumenta a probabilidade do médico acertar o diagnóstico do paciente dado seus sintomas.   
-	\item \textbf{Previsão do clima}, basicamente determinar se amanhã choverá ou não, com base em dados de anos anteriores, ou até mesmo como será a 
-	safra de soja nos próximos anos. 
-	\item \textbf{Detecção de fraude de transações financeiras}, determina com base em métodos estatísticos, a probabilidade de uma transação ser fraudulenta.
+	com interfaces por meios convencionais, como o teclado ou  mouse do computador, e dispositivos móveis com interface \textit{touchscreen};
+	\item \textbf{Reconhecimento facial}: muito utilizada em orgão de segurança para identificar criminosos procurados ou pessoas desaparecidas;
+	\item \textbf{Diagnóstico médico}: aumenta a probabilidade do médico acertar o diagnóstico do paciente dado seus sintomas;   
+	\item \textbf{Previsão do clima}: basicamente determinar se amanhã choverá ou não, com base em dados de anos anteriores, ou até mesmo como será a 
+	safra de soja nos próximos anos; e 
+	\item \textbf{Detecção de fraude de transações financeiras}: determina com base em métodos estatísticos, a probabilidade de uma transação ser fraudulenta.
  \end{alineas}
 
  \subsection{Conceitos importantes}
@@ -68,17 +68,17 @@ Para se ter uma visão mais ampla sobre as possibilidade de aplicações de mach
  Antes de começar a entender como funciona o processo de aprendizagem de máquina deve-se estar a par de alguns conceitos importantes 
  utilizados no meio, são eles:
   \begin{alineas}
-  	\item \textbf{Exemplo/Instância}, também conhecido como \textbf{dado de treino}, é o dado á ser classificado e a saída da etapa de pré=processamento dos dados.
-	Por exemplo em um sistema de visão computacional as imagens são os exemplos.
-	\item \textbf{Atributo}, é uma propriedade de um exemplo que pode ser usada para classifica-lo, também chamado de \textit{feature}. Seguindo o mesmo exemplo do item anterior,
+  	\item \textbf{Exemplo/Instância}: também conhecido como \textbf{dado de treino}, é o dado á ser classificado e a saída da etapa de pré-processamento dos dados.
+	Por exemplo em um sistema de visão computacional as imagens são os exemplos;
+	\item \textbf{Atributo}: é uma propriedade de um exemplo que pode ser usada para classifica-lo, também chamado de \textit{feature}. Seguindo o mesmo exemplo do item anterior,
 	a forma, tamanho ou cor são atribudos de um exemplo de imagem. Determinar quais atributos são valiosos para uma determinada tarefa pode 
-	ser difícil.
-	\item \textbf{Modelo}, é uma representação explícita e resumida dos padrões encontrados entre os dados. A maioria dos algoritmos de indução gerão modelos,
-	para serem usados como classificadores, regressores ou elementos para concepção humana.
-	\item \textbf{Algoritmo de indução/indutor}, são algoritmos que utilizam exemplos e produzem modelos que generalizam estes exemplos.
-	\item \textbf{Classificador}, è a saída de um algoritmo de aprendizagem/indutor, que pode ser usado para classificar.	
-	\item \textbf{\textit{Bias}/Tendência}, pode-se dizer que é um peso dado aos modelos para ajusta-lo, para que se possa induzir o modelo escolhido
-	 a uma determinada expectativa. Em suma é qualquer preferência de uma hipótese sobre outra.
-	 \item \textbf{\textit{Overfitting}}, é uma situação a qual o modelo sofre vários ajustes, oque faz que ele seja muito preciso, 
+	ser difícil;
+	\item \textbf{Modelo}: é uma representação explícita e resumida dos padrões encontrados entre os dados. A maioria dos algoritmos de indução gerão modelos,
+	para serem usados como classificadores, regressores ou elementos para concepção humana;
+	\item \textbf{Algoritmo de indução/indutor}: são algoritmos que utilizam exemplos e produzem modelos que generalizam estes exemplos;
+	\item \textbf{Classificador}: è a saída de um algoritmo de aprendizagem/indutor, que pode ser usado para classificar;	
+	\item \textbf{\textit{Bias}/Tendência}: pode-se dizer que é um peso dado aos modelos para ajusta-lo, para que se possa induzir o modelo escolhido
+	 a uma determinada expectativa. Em suma é qualquer preferência de uma hipótese sobre outra; e
+	 \item \textbf{\textit{Overfitting}}: é uma situação a qual o modelo sofre vários ajustes, oque faz que ele seja muito preciso, 
 	 porém é preciso evitar modelos  esta situação pois estes modelos não refletem perfeitamente a realidade.
   \end{alineas}  

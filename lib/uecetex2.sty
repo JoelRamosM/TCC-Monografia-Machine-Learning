@@ -170,7 +170,10 @@
        	\caption{#1} %
    	\end{Spacing} %
 }
-
+%\renewcommand{\fonte}[1]{\footnotesize Fonte: {#1}}
+%\renewcommand{\fonte}[2][1]{\footnotesize {#1}: {#2}}
+\renewcommand{\fonte}[2][1]{\footnotesize{{#1}}: {#2}}
+ 
 \newcommand{\Fonte}[2][\fontename]{ %
 %	\vspace{-3pt}
 	\vspace{8pt}
@@ -1066,7 +1069,7 @@
 }
 
 \newcommand{\imprimirresumo}[1]{ %
-	\begin{resumo} %
+	\begin{resumo} %				
 		\input{#1} %
 	\end{resumo} %
 }

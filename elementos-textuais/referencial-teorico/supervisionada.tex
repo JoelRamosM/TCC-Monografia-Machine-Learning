@@ -7,7 +7,7 @@ ser fraudulenta.
 
 Aprendizagem supervisionada é mais apropriada e mais usada em aplicações que utilizão dados historicos para realizar predições. 
 Basicamente utiliza-se padrões de dados rotulados para predizer novos dados não rotulados. 
-Os métodos mais utilizados são \textbf{classificação}, \textbf{regressão} ou \textbf{predição numérica}.
+Os métodos mais utilizados são: \textbf{classificação}, \textbf{regressão} ou \textbf{predição numérica}.
 
 O principal objetivo da aprendizagem supervisionada é construi um classificador que possa identificar a classe de novos dados apartir
 do treinamento em exemplos rotulados.     
@@ -25,7 +25,7 @@ este é o produto de um \textbf{indutor}, o objetivo de um indutor é extrair o 
 conjunto de exemplos rotulados.
 Um classificador é gerado após exemplos rotulados serem submetidos á um dado indutor, após a geração do classificador 
 é necessário identificar a qualidade do mesmo, apartir de métricas pré-definidas até atingir resultados aceitáveis, após a aceitação do classificador 
-serão submetidos exemplos não rotulados e o classificador deverá enquadrar os dados em suas devidas classes com precisão. 
+serão submetidos exemplos não rotulados e o classificador deverá enquadrar os dados em suas devidas classes com precisão (~\autoref{fig:novo-classificador}). 
 \begin{figure}[htb!]
 	\centering
 	\Caption{\label{fig:novo-classificador} Processo geração do classificador}	
@@ -36,9 +36,9 @@ serão submetidos exemplos não rotulados e o classificador deverá enquadrar os
 	}	
 \end{figure}  
 
-A Figura ~\ref{fig:amostra-transacoes} ilustra o exemplo de transações de cartão de crédito fraudulentas, dado que tem-se uma 
+A ~\autoref{fig:amostra-transacoes} ilustra o exemplo de transações de cartão de crédito fraudulentas, dado que tem-se uma 
 amostra de transações realizadas. Após estes dados serem submetidos ao classificador, irá predizer com um dado grau de probabilidade 
-a qual classe o exemplo pertence, logo sua saída basicamente será como aprensentado na Figura ~\ref{fig:amostra-transacoes-classefied}:
+a qual classe o exemplo pertence, logo sua saída basicamente será como aprensentado na ~\autoref{fig:amostra-transacoes-classefied}:
 \begin{figure}[ht!]
 	\centering
 	\Caption{\label{fig:amostra-transacoes} Amostra de Transações de cartão de crédito}	
@@ -71,7 +71,7 @@ são utilizados para construção destas árvores de decisão.
 além do nó raiz temos os nós terminais e não terminais também conhecidos como ramos e folhas. Posto que os nós não-terminais/ramos se divide em nós filhos,
 e está divisão é dada por uma condição sobre o valor de um atributo de um exemplo, enquanto que os nós terminais/folhas não se dividem, ele atribui uma classe ao exemplo.
 
-Dado uma árvore de decisão utilizada para classificar pacientes doentes e saudáveis:
+Dado uma árvore de decisão utilizada para classificar pacientes doentes e saudáveis (~\autoref{fig:ex-arvore}).
 
 \begin{figure}[ht!]
 	\centering
@@ -93,14 +93,14 @@ diz-se que um atributo é contínuo quando assume qualquer valor numéricos pres
 pode ser R\$300.000,00 ou R\$890.092,00. Seu objetivo é identificar um modelo de curva ou uma função linear \textit{y = f(x)}, com base
 em parâmetros conhecidos dos exemplos de treino, para prever o valor do \textbf{rótulo} em novos dados.
 Por exemplo dado um conjunto de dados de treino que diz respeito à um imóvel, pretende-se identificar um modelo para poder predizer
-o preço de imóveis:
+o preço de imóveis (~\autoref{tab:dados-imoveis}).
 
 \begin{table}[h!]
-	\Caption{\label{dados-imoveis} Exemplos rotulado de dados de imóveis}
+	\Caption{\label{tab:dados-imoveis} Exemplos rotulado de dados de imóveis}
 	\IBGEtab{}{
 		\begin{tabular}{rr}
 			\toprule
-			Área ($m^{2}$) & Preco (R\$) \\
+			Área ($m^{2}$) & Preco (R\$) "Rótulo"\\
 			\midrule \midrule
 			192,00  &        250.000,00  \\
 			140,55  &        187.000,00  \\
@@ -113,12 +113,11 @@ o preço de imóveis:
 			\bottomrule
 		\end{tabular}
 	}{
-    \Fonte{Produzido pelo autor}
-	\Nota{A coluna preço é o rótulo de cada exemplo.}	
+    \Fonte{Autoria própria}		
 }
 \end{table} 
 
-Pretende-se identificar um modelo que ao aplicar um novo imóvel com área de \textit{x $m^2$} me retorne o seu possível valor. A Figura ~\ref{fig:regressao-plano-cartesiano} ilustra 
+Pretende-se identificar um modelo que ao aplicar um novo imóvel com área de \textit{x $m^2$} me retorne o seu possível valor. A ~\autoref{fig:regressao-plano-cartesiano} ilustra 
 o modelo de regressão deste caso, que é basicamente um função linear \textit{y = f(x)}, onde \textbf{\textit{y}} seria o valor que estamos tentando inferir e \textbf{\textit{x}} é o parâmetro 
 conhecido que será utilizado, neste caso a área do imóvel.
 

@@ -4,8 +4,8 @@
 O processo básico de aprendizagem de máquina consiste em entrada de dados, abstração e generalização (Figura~\ref{fig:processo-aprendizagem}).
 \begin{alineas}
 	\item Entrada de dados: são fatos tirados da memoria ou da observação;
-	\item Abstração: transformar estes dados em algo mais objetivo e que faça sentido;
-	\item Generalização: utiliza os dados abstraídos e para  identificar padrões e assim classifica-los;			
+	\item Abstração: transformar estes dados em algo mais objetivo e que faça sentido; e
+	\item Generalização: utiliza os dados abstraídos e para  identificar padrões e assim classifica-los.			
 \end{alineas}
 
 \begin{figure}[h!]
@@ -25,7 +25,7 @@ Todo este processo ocorre na ordem apresentada, pois o conceito de abstração e
 \label{subsec:abs-representacao-dados}
 
 Durante a abstração os dados de entradas, são preparados para que possuam algum sentido em um contexto.
-Para ilustrar este processo, lembre de quando aprendeu a executar operações de soma e subtração, que sua professora apresentou (Figura ~\ref{fig:exemplo-aprendizagem}):
+Para ilustrar este processo, lembre de quando aprendeu a executar operações de soma e subtração, que sua professora apresentou (Figura ~\ref{fig:exemplo-aprendizagem}).
 
 \begin{figure}[ht!]
 	\centering
@@ -53,11 +53,11 @@ Você ignorou todas as propriedades da maçã como ser uma fruta, ter a cor verm
 A etapa seguinte do processo de abstração é a representação do conhecimento, onde é gerado um 
 \textbf{\textit{modelo}} 
 Existem vários tipos de modelos, alguns deles são:
-\begin{alineascomponto}
+\begin{alineas}
     \item equações;
-    \item grafos;e
-    \item estruturas de lógicas de programação como: \textit{if} e \textit{else}; 
-\end{alineascomponto} 
+    \item grafos; e
+    \item estruturas de lógicas de programação como: \textit{if} e \textit{else}. 
+\end{alineas} 
 
 A escolha do modelo não é feita pelo sistema de aprendizagem, depende do tipo da tarefa \textbf{\textit{T}} e o tipo dos dados
 que estão sendo analisados. A etapa que gera um modelo específico de um conjunto de dados é chamada de treino de dados \textbf{\textit{E}}. 
@@ -69,13 +69,13 @@ estes dados se relacionam. Estas relações identificadas sempre estiveram prese
 \subsection{Generalização}
 \label{subsec:generalização-dados}
 
-Até que o sistema possa utilizar o cohecimento abstrato para uma ação futura, o processo de aprendizagem ainda não está concluído.
+Até que o sistema possa utilizar o conhecimento abstrato para uma ação futura, o processo de aprendizagem ainda não está concluído.
 O processo de generalização transforma o conhecimento abstrato prévio em um formato que possa ser utilizado para um ação, é um 
 processo difícil de ser descrito, mas pode ser visto como uma busca nos modelos ou teorias geradas no processo de abstração, porém pode existir
 um grande número de modelos disponíveis.
 
 Dado que exista um grande número de modelos, durante a generalização este número será reduzido de forma qualitativa. 
-Mas não é praticável examinar cada um dos modelos e verificar se atende aos prâmetros, portanto os algoritmos de machine learning utilizam 
+Mas não é praticável examinar cada um dos modelos e verificar se atende aos parâmetros, portanto os algoritmos de machine learning utilizam 
 técnicas de busca como heurística para diminuir a área de busca para encontrar os modelos que mais se aproximam do esperado.
 Segundo \cite{heuristica}:
 \begin{citacao}
@@ -108,7 +108,8 @@ se diferenciam da tendência e entre si. Neste caso conseguimos ter dois parâme
 \end{alineas}   
 
 Matematicamente, se nossa função real é \textit{Y = f(X) + E}, e queremos estimar um modelo \textit{h(x)} que aproxima a função \textit{f(x)},
-o bias (1) e a variância (2) serão, respectivamente:
+o bias (1) e a variância (2) serão, respectivamente na (Figura~\ref{fig:bias-func}).
+
 \begin{figure}[ht!]
 	\centering
 	\Caption{\label{fig:bias-func} Modelo matemático: Bias e Variância}	

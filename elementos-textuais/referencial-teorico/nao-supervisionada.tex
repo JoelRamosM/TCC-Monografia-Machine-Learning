@@ -1,4 +1,4 @@
-\subsection{Aprendizagem Não-Supervisionada}
+\subsection{Aprendizagem não-supervisionada}
 \label{subsec:unsupervised-learning}
 
 Diferente de aprendizagem supervisionada, este método não conta com dados históricos rotulados. Em suma tem como objetivo encontrar
@@ -8,7 +8,7 @@ as diferenças e similaridades entre eles e com isso extrair alguns
 compreensão súbita de alguma coisa ou determinada situação.}.
 
 Aprendizagem não-supervisionada utiliza a técnica de clusterização para agrupar grandes quantidades de dados não rotulados,
-e após identificar estes grupos basicamente criar rótulos para identificar padrões em novos dados e agrupa-los no seu respectivo
+e após identificar estes grupos basicamente criar rótulos para identificar padrões em novos dados e agrupá-los no seu respectivo
 grupo.
 
 \subsubsection{Clusterização}
@@ -30,9 +30,9 @@ de distância \textit{d(x,y)}, é importante saber que um objeto é um exemplo, 
 distância para cada tipo de atributo. São os tipos:
 
 \begin{alineas}
-	\item \textbf{Numéricos}, como por exemplo: temperatura, latitude, idade, altura, peso, etc. 
-	\item \textbf{Binários}, possuem somente dois estados por exemplo, 1 ou 0, homem ou mulher, verdadeiro ou falso, etc.
-	\item \textbf{Nominais}, basicamente é um generalização do tipo \textbf{binário}, por exemplo tipos de filmes(ação, aventura, comédia, romance, etc..).  
+	\item \textbf{Numéricos}: como por exemplo: temperatura, latitude, idade, altura, peso, etc.; 
+	\item \textbf{Binários}: possuem somente dois estados por exemplo, 1 ou 0, homem ou mulher, verdadeiro ou falso, etc.; e
+	\item \textbf{Nominais}: basicamente é um generalização do tipo \textbf{binário}, por exemplo tipos de filmes(ação, aventura, comédia, romance, etc..).  
 \end{alineas}
 
 A seleção de atributos para clusterização é uma etapa muito importante pois deve-se ter uma preocupação em escolher os atributos
@@ -46,25 +46,25 @@ Após a definição da medida de proximidade e o critério de agrupamento, é ne
 Basicamente estes algoritmos pretendem identificar padrões nos dados. Estes podem ser divididos em categorias, suas principais são:
 
 \begin{alineas}
-	\item \textbf{Sequenciais}, são diretos e rápidos, e normalmente os mesmos dados passam várias pelo algoritmo e a ordem em que os 
-	dados são submetidos ao algoritmo influencia diretamente no resultado. Um de seus principais algoritmos é o BSAS.  
+	\item \textbf{Sequenciais}: são diretos e rápidos, e normalmente os mesmos dados passam várias pelo algoritmo e a ordem em que os 
+	dados são submetidos ao algoritmo influencia diretamente no resultado. Um de seus principais algoritmos é o BSAS;  
 	
-	\item \textbf{Hierárquicos},  é dividido em duas subcategorias:
+	\item \textbf{Hierárquicos}:  é dividido em duas subcategorias:
 		\begin{alineas}
-			\item \textbf{Aglomerativos}, a cada iteração diminui a quantidade de clusters como a Figura~\ref{fig:proc-aglo} ilustra, fundindo o cluster da iteração anterior com a atual. 
-			\item \textbf{Divisivos}, a cada iteração almenta a quantidade de clusters como a Figura~\ref{fig:proc-div}, dividindo o cluster em 2. 
+			\item \textbf{Aglomerativos}: a cada iteração diminui a quantidade de clusters como a ~\autoref{fig:proc-aglo} ilustra, fundindo o cluster da iteração anterior com a atual; e 
+			\item \textbf{Divisivos}, a cada iteração almenta a quantidade de clusters como a ~\autoref{fig:proc-div}, dividindo o cluster em 2. 
 		\end{alineas} 	
-	\item \textbf{Baseados em otimização}, utiliza diversas técnicas de cálculo para otimização de uma função de custo \textit{J}, 
+	\item \textbf{Baseados em otimização}: utiliza diversas técnicas de cálculo para otimização de uma função de custo \textit{J}, 
 	onde o custo \textit{J} é uma função de vetores\footnote{Vetor é um conjunto de atributos de um exemplo} de um conjunto de exemplos \textit{X} e é parametrizado em termos de um 
 	vetor de parâmetros desconhecidos. O objetivo é estimar os parâmetros desconhecidos que melhor caracterize os clusters no
 	conjunto de dados. Existem 3 principais subcategorias de algoritmos:  
 	\begin{alineas}
-		\item \textbf{Decomposição de misturas}, a função de custo é baseada base em atributos aleatórios.
+		\item \textbf{Decomposição de misturas}: a função de custo é baseada base em atributos aleatórios;
 		
-		\item \textbf{Método \textit{Fuzzy}}, é definida uma função de proximidade entre um vetor e um cluster e o
-		 “grau de afiliação (adesão)” de um vetor a um cluster é fornecido por um conjunto de funções afiliação.	
+		\item \textbf{Método \textit{Fuzzy}}: é definida uma função de proximidade entre um vetor e um cluster e o
+		 “grau de afiliação (adesão)” de um vetor a um cluster é fornecido por um conjunto de funções afiliação; e	
 		
-		\item \textbf{Método \textit{Hard}}, cada vetor pertence exclusivamente a um único cluster, por este motivo é chamado de \textit{Hard}.		 	
+		\item \textbf{Método \textit{Hard}}: cada vetor pertence exclusivamente a um único cluster, por este motivo é chamado de \textit{Hard}.		 	
 	\end{alineas} 		
 \end{alineas}   
 
@@ -73,7 +73,7 @@ Como dito por \cite{k-means}Como o algoritmo \textit{k-means} evoluiu ao longo d
  
  O entendimento deste algoritmo possibilita uma fácil assimilação de  muitos outros algoritmos de clusterização usados hoje me dia,
  apesar destes algoritmos terem avançado muito desde a criação do k-means, não quer dizer que seja obsoleto,  
- o Quadro ~\ref{qua:k-means-str-wek} mostra algumas caracteristicas deste algoritmo.
+ o ~\autoref{qua:k-means-str-wek} mostra algumas caracteristicas deste algoritmo.
 
  O algoritmo \textit{k-means} relaciona cada exemplo em um dos \textit{k} clusteres, onde \textit{k} é a quantidade de clusters 
  especificada previamente. Tem como objetivo minimizar a diferença entre os membros do cluster e aumentar a diferença entre os clusteres.

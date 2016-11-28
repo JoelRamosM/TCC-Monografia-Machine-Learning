@@ -10,19 +10,25 @@ quando o é impraticavel a aprendizagem com exemplos.
 
 Quando se aplicada a aprendizagem por reforço é muito comum utilizar o processo de decisão de Markov (MDP). 
 Este tipo de aprendizagem possui três componentes importantes em sua aplicação:
+
 \begin{alineas}
-	\item O \textbf{agente}, é o responsável pelas tomadas de decisões.
-	\item O \textbf{ambiente}, é tudo com oque o agente interage.
-	\item As \textbf{ações}, é oque o agente pode fazer.
+	\item O \textbf{agente}: é o responsável pelas tomadas de decisões;
+	\item O \textbf{ambiente}: é tudo com oque o agente interage; e
+	\item As \textbf{ações}: é oque o agente pode fazer.
 \end{alineas}  
- Em suma a aprendizagem por reforço tem como principal objetivo encontra uma política de ações que maximize seus ganhos(recompensa). Para ilustrar 
+ 
+ 
+ Em suma, a aprendizagem por reforço tem como principal objetivo encontrar uma política de ações que maximize seus ganhos(recompensa). Para ilustrar 
  pense em um agente em um dado ambiente, onde a cada instante de tempo o agente está:   
-\begin{alineascomponto}
+
+\begin{alineas}
 	\item em um estado $x$;
 	\item executa um ação $a$;
 	\item vai para o estado $s'$; e
-	\item recebe uma recompensa $r$;
-\end{alineascomponto}
+	\item recebe uma recompensa $r$.
+\end{alineas}
+
+
 Com isso ele consegue coletar informações para identificar qual ação resulta em uma maior recompensa,
 está recompensa é um \textit{feedback} do ambiente sobre o comportamento do agente. 
  
@@ -34,13 +40,13 @@ prover informações para o agente de quais ações podem ser executadas, como p
 E a \textbf{transição de estado} descreve uma mudança no estado em um período de tempo, 
 dado o exemplo da festa uma mudança de estado seria quando a musíca para.
 
-Uma função de recompença é dada por  $r: (S \times A) \rightarrow R$. A função $r(s,a)$ que indica a recompensa 
+Uma função de recompensa é dada por  $r: (S \times A) \rightarrow R$. A função $r(s,a)$ que indica a recompensa 
 recebida quando se esta em um estado $s$ e executa uma ação $a$, está pode ser determinística ou estocástica. Logo uma 
-função de trasição de estado é dada por $\delta:(S \times A) \rightarrow S $ e $\delta:(s,a)$ que indica em que 
+função de transição de estado é dada por $\delta:(S \times A) \rightarrow S $ e $\delta:(s,a)$ que indica em que 
 estado um agente está, sendo que estava em um estado $s$ e executou uma ação $a$, em um ambiente não-determinístico
-a funça é dada por $\delta:(s,a,s')$ que indica a probabilidade a probabilidade de ir para um estado $s'$ sendo que
+a função é dada por $\delta:(s,a,s')$ que indica a probabilidade a probabilidade de ir para um estado $s'$ sendo que
 estava em um estado $s$ e realizou a ação $a$.
-Um bom exemplo de MDP é um agente jogador de Damas como mostra o Quadro ~\ref{qua:agente-jogador}
+Um bom exemplo de MDP é um agente jogador de Damas como mostra o ~\autoref{qua:agente-jogador}.
 
 \begin{quadro}[h!]	
 	\centering
@@ -62,7 +68,7 @@ Um bom exemplo de MDP é um agente jogador de Damas como mostra o Quadro ~\ref{q
 
 A política de ações é responsável por modelar o comportamento de um dado agente mapeando os estados em ações, esta pode 
 ser vista como um conjunto de regras tida como $s_{n} \rightarrow a_{n}$, pode ser ilustrada como instruções de controle 
-de fluxo \textit{if}, o Algoritmo ~\ref{alg:se} apresenta algumas regras dado o exemplo de um personagem de um jogo:
+de fluxo \textit{if}, o ~\autoref{alg:se} apresenta algumas regras dado o exemplo de um personagem de um jogo:
 \begin{algorithm}[h!]
 	\SetSpacedAlgorithm
 	\caption{\label{alg:se}Exemplo regras política de ações}
@@ -87,10 +93,13 @@ se ele for infinito a função valor tende a infinito. Para garantir a convêrge
 estado atual é utilizado um fator de desconto onde $0 \leqslant \lambda \leqslant 1$  e a função de valor é dada por
 $V\pi(S_{t})= r_{t} + \gamma r_{t+1} + \gamma^{2} r_{t+2} + \gamma^{3} r_{t+3} ... \gamma^{n} r_{t+n}$, por exemplo
 se o fator $\gamma$ for 90\%, logo a função será:
+
 \begin{equation}
 	\begin{aligned}
  			V\pi(S_{t})= r_{t} + 0.9 r_{t+1} + 0.81 r_{t+2} + 0.729 r_{t+3} ... 0.9^{n} r_{t+n}
 	\end{aligned}
 \end{equation}
+
+
 Com esta função é possível determinar se um dado estado é bom ou ruim e com isso é possível ter insumos de qual
 ações tomar para maximizar a recompensa.
