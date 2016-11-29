@@ -65,7 +65,7 @@ Veja a seguir como inserir alguns elementos no seu texto.
 			\bottomrule
 		\end{tabular}
 	}{
-		\Fonte{Autoria própria}
+		\Fonte{Autoria própria.}
     }
 \end{table}
 ```
@@ -86,7 +86,7 @@ Veja a seguir como inserir alguns elementos no seu texto.
 			\hline
 		\end{tabular}
 	}{
-		\Fonte{Autoria própria}
+		\Fonte{Autoria própria.}
 	}
 \end{quadro}
 ```
@@ -99,7 +99,7 @@ Veja a seguir como inserir alguns elementos no seu texto.
 	\UECEfig{}{
 	    \includegraphics[width=8cm]{figuras/figura-1}
 	}{
-	    \Fonte{Autoria própria}
+	    \Fonte{Autoria própria.}
 	}	
 \end{figure}
 ```
