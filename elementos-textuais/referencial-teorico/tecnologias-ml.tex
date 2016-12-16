@@ -1,37 +1,38 @@
 \section{Tecnologias para Machine Learning}
 \label{sec:tech-ml}
 
-Machine Learning é uma área que vem sendo explorada e aprimorada a cada dia por cientistas tanto da iniciativa privada 
-como pública e acadêmica. Com a rápida evolução a cada dia são desenvolvidas novas tecnologias para o desenvolvimento
+Machine Learning é uma área que vem sendo explorada e aprimorada por cientistas tanto da iniciativa privada 
+como pública e acadêmica. Com a rápida evolução, onde são desenvolvidas novas tecnologias para o desenvolvimento
 de métodos e algoritmos de machine learning, para ilustrar melhor é possível  dividir estas tecnologias em categorias, são elas
 \textbf{linguagens de programação} e \textbf{\textit{frameworks}}, \textbf{ferramentas} e \textbf{serviços na nuvem}. 
 
 \subsection{Principais linguagens de programação e frameworks}
 \label{subsec:ling-prog}
 
-É possível desenvolver um algoritmo utilizando qualquer linguagem de programação, mas é de suma importância que entenda as implicações
+É possível desenvolver um algoritmo utilizando qualquer linguagem de programação, mas é de grande importância que entenda as implicações
 em relação á escalabilidade, performance, sintaxe e paradigmas atendidos pela linguagem escolhida. 
 
 Muitos desenvolvedores optam por desenvolver um algoritmo com a linguagem a qual possuem mais familiaridade, 
 porém dependendo da linguagem pode haver algumas caracteristicas que  oneram a performance, como por exemplo linguagens que possuem 
 \textit{Garbage Collectors} \footnote{\textbf{\textit{Garbage collector}} é um mecanismo que verifica espaços alocados na memoria que não estão mais sendo utilziados e os remove.} como Java, C\#, Python entre outras. É aconselhavel que o desenvolvedor válide a 
-idéia com protótipos desenvolvidos com a linguagem que possua mais familiaridade, isto torna o processo mais rápido, porém e necessário
-validar se será necessário refazer o código para produção em uma outra linguagem mais performática, pois em alguns casos não à necessidade
-de reescrever o código em outra linguagem pois o protótipo atende os critérios desejados de performance e escalabilidade. 
+idéia com protótipos desenvolvidos com a linguagem que possua mais familiaridade, isto torna o processo mais rápido, porém é necessário
+validar se deverá refazer o código para produção em uma outra linguagem mais performática, pois em alguns casos não à necessidade
+de reescrever o código em outra linguagem se o protótipo atender os critérios desejados de performance e escalabilidade. 
 
 A linguagem de programação não influenciará no resultado final do algoritmo, porém influencia no tempo de desenvolvimento e 
 velociade de processamento, alguns critérios comuns são adotados na escolha:
 
 \begin{alineas}
-    \item Sintaxe, pois influencia diretamente na manuntenção e entendimento do código, uma boa sintaxe torna mais fácil a evolução e melhora do algoritmo;
-    \item Funcionalidades dentro da linguagem, como polimorfismo, estruturas de dados como \textbf{\textit{hash tables}}, etc.; 
-    \item Bibliotecas e Frameworks disponíveis, é interessante que exista bibliotecas de estatistica, algebra, graficas, \textit{I/O} e grafos. Para que
-          o desenvolvedor não se preocupe em reinventar a roda e utilizar funções de cálculos ou leituras de uma imgem prontas, e foque no algoritmo de 
-          aprendizado; e
+    \item Sintaxe, tem influência direta na manuntenção e entendimento do código, uma boa sintaxe torna mais fácil a evolução e melhora do algoritmo;
+    \item Funcionalidades dentro da linguagem, como polimorfismo, estruturas de dados como \textbf{\textit{hash tables}}, etc. 
+		  Estas podem melhorar a produtividade; 
+    \item Bibliotecas e frameworks disponíveis, é interessante que exista bibliotecas de estatística, de álgebra, gráficas, \textit{I/O} e grafos. Para que
+          o desenvolvedor não se preocupe em fazer algo que esteja disponível, 
+		  e utilizar funções de cálculos ou leituras de uma imgem prontas, e foque no algoritmo de aprendizado; e
     \item Familiaridade, não somente a do desenvolvedor mas de toda pessoa que possa ver o código.     
 \end{alineas}
 
-Foi realzada uma pesquisa em 2015 pela \textbf{KDNuggets} \footnote{\textbf{KDNuggets} é um site muito famoso nas áreas de Big Data, Data Mining e Data Science.}, para identificar qual a linguagem mais popular dentre os desenvolvedores de algortimos para 
+Foi realizada uma pesquisa em 2015 pela \textbf{KDNuggets} \footnote{\textbf{KDNuggets} é um site muito famoso nas áreas de Big Data, Data Mining e Data Science.}, para identificar qual a linguagem mais popular dentre os desenvolvedores de algortimos para 
 machine learning, a ~\autoref{fig:poll-lang} mostra o resultado da pesquisa, constatou-se que a linguagem \textbf{R} é a mais utilizada seguida de 
 \textbf{Python}.   
 

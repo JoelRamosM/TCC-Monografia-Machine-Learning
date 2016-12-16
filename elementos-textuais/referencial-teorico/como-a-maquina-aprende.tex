@@ -3,9 +3,9 @@
 
 O processo básico de aprendizagem de máquina consiste em entrada de dados, abstração e generalização (Figura~\ref{fig:processo-aprendizagem}).
 \begin{alineas}
-	\item Entrada de dados: são fatos tirados da memoria ou da observação;
+	\item Entrada de dados: são fatos tirados da memória ou da observação;
 	\item Abstração: transformar estes dados em algo mais objetivo e que faça sentido; e
-	\item Generalização: utiliza os dados abstraídos e para  identificar padrões e assim classifica-los.			
+	\item Generalização: utiliza os dados abstraídos para identificar padrões e assim classificá-los.			
 \end{alineas}
 
 \begin{figure}[h!]
@@ -95,8 +95,8 @@ no entanto é impraticável realizar esta pesquisa sem utilizar está técnica.
 A heurística aplicada em aprendizagem de máquina as vezes resulta em modelos errados, se os modelos constantemente 
 forem imprecisos, é necessário incluir tendências no algoritmo e utilizar técnicas estatísticas como \textbf{bias} e \textbf{variância} 
 para identificar os erros. Porém é necessário atentar para que estes ajustes não deturpem a realidade e acabe causando o \textit{overfitting}.
-Por exemplo dado um algoritmo que identifica rostos em imagens, ele procura por dois circulos (os olhos) em cima de uma linha (a boca), oque pode 
-ser considerado uma tendência, ao treinar os modelos será utilizado varias imagens com diversas formas de rosto, com oculos, 
+Por exemplo dado um algoritmo que identifica rostos em imagens, ele procura por dois circulos (os olhos) em cima de uma linha (a boca), isto pode 
+ser considerado uma tendência, ao treinar os modelos será utilizado varias imagens com diversas formas de rosto, com óculos, 
 com barba, olhando para o lado, etc.
 Após o treino teremos vários outros modelos para a mesma finalidade, logo devemos poder medir o quanto estes modelos 
 se diferenciam da tendência e entre si. Neste caso conseguimos ter dois parâmetros de erro de modelo:
@@ -121,10 +121,10 @@ o bias (1) e a variância (2) serão, respectivamente na (Figura~\ref{fig:bias-f
 \end{figure}
 
 A última etapa da generalização é determinar o sucesso dos modelos, depois de treinado com os dados iniciais
-o modelo é testado em novos dados e avaliado como o processo de generalização se comporta, é importante ter em mente que é extremamente raro
-que o modelo atenda perfeitamente todos os casos imprevistos.
+o modelo é testado com novos dados e avaliado como o processo de generalização se comporta, é importante saber que é extremamente raro
+que um modelo atenda perfeitamente todos os casos imprevistos.
 Um dos motivos para que um modelo não generalize perfeitamente todos os casos é chamado de ruído, são variações não previstas nos dados.
-Estes ruidos são causados por dados corrompidos, cálculos imprecisos ou até mesmo entrada de dados inconsistentes.
+Estes ruídos são causados por dados corrompidos, cálculos imprecisos ou até mesmo entrada de dados inconsistentes.
 
 
 

@@ -5,7 +5,7 @@ exemplos rotulados. Por exemplo um conjunto de dados de transações que possui 
 algoritmo procurará um padrão destes marcados como fraudulentos e gerará um modelo que indique a probabilidade de uma nova transação 
 ser fraudulenta.
 
-Aprendizagem supervisionada é mais apropriada e mais usada em aplicações que utilizão dados historicos para realizar predições. 
+Aprendizagem supervisionada é mais apropriada e mais usada em aplicações que utilizam dados históricos para realizar predições. 
 Basicamente utiliza-se padrões de dados rotulados para predizer novos dados não rotulados. 
 Os métodos mais utilizados são: \textbf{classificação}, \textbf{regressão} ou \textbf{predição numérica}.
 
@@ -23,8 +23,10 @@ Em suma os novos dados são categorizados com base nas classes dos dados de trei
 Mas para que se possa estimar qual a classe destes novos dados é preciso de um \textbf{classificador},
 este é o produto de um \textbf{indutor}, o objetivo de um indutor é extrair o melhor classificador possível de um dado 
 conjunto de exemplos rotulados.
-Um classificador é gerado após exemplos rotulados serem submetidos á um dado indutor, após a geração do classificador 
-é necessário identificar a qualidade do mesmo, apartir de métricas pré-definidas até atingir resultados aceitáveis, após a aceitação do classificador 
+
+
+Um classificador é gerado após exemplos rotulados serem submetidos à um dado indutor, após a geração do classificador 
+é necessário identificar a qualidade do mesmo, a partir de métricas pré-definidas até atingir resultados aceitáveis, após a aceitação do classificador 
 serão submetidos exemplos não rotulados e o classificador deverá enquadrar os dados em suas devidas classes com precisão (~\autoref{fig:novo-classificador}). 
 \begin{figure}[htb!]
 	\centering
@@ -63,13 +65,13 @@ Existem alguns algoritmos de classificação muito utilizados como  \textbf{árv
 
 \subsubsection{Classificação com Árvore de decisões}
 \label{subsubsec:decision-tree}
-Este algoritmo tem com objetivo particionar em classes de forma recursiva os exemplos rotulados, é importante lembrar que este método
+Tem com objetivo particionar em classes de forma recursiva os exemplos rotulados, este método
 utiliza tanto atributos discretos quanto recursivos para classificar. Alguns algoritimos como ID3, ASSISTANT, CART E C4.5 
 são utilizados para construção destas árvores de decisão.
 
 Árvores de decisão são facilmente representadas por um fluxograma com a estrutura de uma árvore, onde o ponto de partida é chamado de nó raiz,
-além do nó raiz temos os nós terminais e não terminais também conhecidos como ramos e folhas. Posto que os nós não-terminais/ramos se divide em nós filhos,
-e está divisão é dada por uma condição sobre o valor de um atributo de um exemplo, enquanto que os nós terminais/folhas não se dividem, ele atribui uma classe ao exemplo.
+além do nó raiz temos os nós terminais e não terminais também conhecidos como ramos e folhas. Os nós não-terminais se divide em nós filhos,
+e está divisão é dada por uma condição sobre o valor de um atributo de um exemplo, enquanto que os nós terminais não se dividem, ele atribui uma classe ao exemplo.
 
 Dado uma árvore de decisão utilizada para classificar pacientes doentes e saudáveis (~\autoref{fig:ex-arvore}).
 

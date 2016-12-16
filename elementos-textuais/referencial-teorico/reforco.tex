@@ -3,12 +3,12 @@
  
 Muito semelhante a tradicional análise de dados onde o algoritmo de descoberta por tentativa e erro
 decide qual ação resulta em maior ganho, e diferente dos outros métodos de aprendizagem não utiliza exemplos para treino
-e sim trabalha com feedbacks do ambiente. de acordo com \cite{Valiant:1984:TL:1968.1972} "O número de exemplos necessários para 
+e sim trabalha com \textit{feedbacks} do ambiente. de acordo com \cite{Valiant:1984:TL:1968.1972} "O número de exemplos necessários para 
 se aprender um certo conceito cresce exponencialmente de acordo com o número de atributos", por isto se utiliza este tipo de aprendizagem
-quando o é impraticavel a aprendizagem com exemplos.
+quando é impraticavel a aprendizagem com exemplos.
 
 
-Quando se aplicada a aprendizagem por reforço é muito comum utilizar o processo de decisão de Markov (MDP). 
+Quando aplicada a aprendizagem por reforço é muito comum utilizar o processo de decisão de Markov (MDP). 
 Este tipo de aprendizagem possui três componentes importantes em sua aplicação:
 
 \begin{alineas}
@@ -18,8 +18,8 @@ Este tipo de aprendizagem possui três componentes importantes em sua aplicaçã
 \end{alineas}  
  
  
- Em suma, a aprendizagem por reforço tem como principal objetivo encontrar uma política de ações que maximize seus ganhos(recompensa). Para ilustrar 
- pense em um agente em um dado ambiente, onde a cada instante de tempo o agente está:   
+ A aprendizagem por reforço tem como principal objetivo encontrar uma política de ações que maximize seus ganhos(recompensa). Ilustrando 
+ um agente em um dado ambiente, onde a cada instante de tempo o agente está:   
 
 \begin{alineas}
 	\item em um estado $x$;
@@ -41,7 +41,7 @@ E a \textbf{transição de estado} descreve uma mudança no estado em um períod
 dado o exemplo da festa uma mudança de estado seria quando a musíca para.
 
 Uma função de recompensa é dada por  $r: (S \times A) \rightarrow R$. A função $r(s,a)$ que indica a recompensa 
-recebida quando se esta em um estado $s$ e executa uma ação $a$, está pode ser determinística ou estocástica. Logo uma 
+recebida quando se esta em um estado $s$ e executa uma ação $a$, esta pode ser determinística ou estocástica. Logo uma 
 função de transição de estado é dada por $\delta:(S \times A) \rightarrow S $ e $\delta:(s,a)$ que indica em que 
 estado um agente está, sendo que estava em um estado $s$ e executou uma ação $a$, em um ambiente não-determinístico
 a função é dada por $\delta:(s,a,s')$ que indica a probabilidade a probabilidade de ir para um estado $s'$ sendo que
@@ -85,7 +85,7 @@ de fluxo \textit{if}, o ~\autoref{alg:se} apresenta algumas regras dado o exempl
 	}		
 \end{algorithm}   
 
-Posto que uma política de ações mapeia estados em ações, como determinar se um dado estado é bom ou ruim?
+Ainda que uma política de ações mapeie estados em ações, como determinar se um dado estado é bom ou ruim?
 A função de valor de estado expressa isto em termos de recompensas e a política de ações, basicamente representa
 uma recompensa a receber em um dado estado mais as recompensas futuras se seguir uma certa política de ações, esta
 funça é dada por $V\pi(S_{0})= r_{0}+r_{1}+r_{2}+r_{3}+ ... + r_{n}$, é importante atentar para o tempo, pois 
