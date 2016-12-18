@@ -27,8 +27,8 @@ velociade de processamento, alguns critérios comuns são adotados na escolha:
     \item Funcionalidades dentro da linguagem, como polimorfismo, estruturas de dados como \textbf{\textit{hash tables}}, etc. 
 		  Estas podem melhorar a produtividade; 
     \item Bibliotecas e frameworks disponíveis, é interessante que exista bibliotecas de estatística, de álgebra, gráficas, \textit{I/O} e grafos. Para que
-          o desenvolvedor não se preocupe em fazer algo que esteja disponível, 
-		  e utilizar funções de cálculos ou leituras de uma imgem prontas, e foque no algoritmo de aprendizado; e
+          o desenvolvedor não se preocupe em fazer algo que esteja disponível e utilize funções de cálculos ou de leitura de imgem prontas, 
+		  e foque no algoritmo de aprendizado; e
     \item Familiaridade, não somente a do desenvolvedor mas de toda pessoa que possa ver o código.     
 \end{alineas}
 
@@ -37,21 +37,21 @@ machine learning, a ~\autoref{fig:poll-lang} mostra o resultado da pesquisa, con
 \textbf{Python}.   
 
 
-A linguagem \textbf{R} é mais utilizada para estes tipos algortimos porque foi projetada para computação estatistica, portanto 
-nativamente possui muitas funções uteis para cálculos estatisticos e processamento de muitos dados, é 
-altamente escalável oque é otimo para mineração de dado em uma grande massa de dados, além de possuir um grande repositório com 
-bibliotecas que facilitam a aplicação da maioria dos tipos de algoritmos para machine learning e testes estatisticos o 
+A linguagem \textbf{R} é mais utilizada para estes tipos algortimos porque foi projetada para computação estatística, portanto 
+nativamente possui muitas funções úteis para cálculos estatísticos e processamento de muitos dados, é 
+altamente escalável e isso é otimo para mineração de dado em uma grande massa de dados, além de possuir um grande repositório com 
+bibliotecas que facilitam a aplicação da maioria dos tipos de algoritmos para machine learning e algoritmos estatísticos, o 
 \textbf{CRAN}(\textit{Comprehensive R Archive Network}). 
 Possui uma sintaxe elegante para transfomar dados, expressar relacionamentos e é muito fácil criar operações paralelas.
-\textbf{CRAN} é um repositório de bibliotecas para a linguagem \textbf{R}, atualmente(2016) possui 9481 bibliotecas ativas, 
+\textbf{CRAN} é um repositório de bibliotecas para a linguagem \textbf{R}, no ano de 2016 o CRAN possui 9.728 bibliotecas ativas segundo o site do repositório, 
 onde parte são focadas em machine learning.
 
 
-Porém \textbf{Python} é uma linguagem mais generalista, atendendo diversos tipos de desenvolvimento como web, descktop e serviços, 
-é tambem uma linguagem de script ou seja e interpredada em tempo de execução e não compilada. 
+Diferente de \textbf{R}, \textbf{Python} é uma linguagem mais generalista, atendendo diversos tipos de desenvolvimento como web, descktop e serviços, 
+é tambem uma linguagem de script ou seja é interpredada em tempo de execução e não compilada. 
 Isto fez com que ficasse muito popular entre os cientistas de dados e engenheiros de machine learning, mesmo que diferente de 
 \textbf{R} não possua nativamente funções estatisticas existem bibliotecas que oferecem estas mesmas funções com uma sintaxe
-indiscutivelmente mais simples, no repositório \textbf{PyPI}(\textit{Python Package Index}) que atualmente possui 92380 bibliotecas disponíveis.      
+ mais simples, no repositório \textbf{PyPI}(\textit{Python Package Index}) que atualmente possui 92.380 bibliotecas disponíveis segundo o site do repositório.      
 
 \begin{figure}[h!]
 	\centering
@@ -63,7 +63,7 @@ indiscutivelmente mais simples, no repositório \textbf{PyPI}(\textit{Python Pac
 	}	
 \end{figure}
 
-Além das linguagens e suas bibliotecas citadas, exitem alguns frameworks muito usados pela comunidade de engenheiros de machine learning, 
+Além das linguagens e bibliotecas citadas, exitem alguns frameworks muito usados pela comunidade de engenheiros de machine learning, 
 que não necessáriamente utilizam as linguagens mais comuns, os principais são \textbf{Apache Spark} e o \textbf{Apache Hadoop.}
 
 O framework \textbf{Apache Spark} é voltado para processamento de \textbf{Big Data}, feito para ser usual, rápido e para o uso de análises mais
@@ -71,24 +71,25 @@ sofisticadas. É um projeto da \textbf{Fundação Apache}, que é uma organizaç
 projetos com código livre, logo o \textbf{Spark} é um projeto de código livre. Este vem sendo desenvolvido desde 2009 pelo 
 AMPLab da Universidade de Califórnia em Berkeley e em 2010 seu código foi aberto como projeto da fundação Apache. 
 O Spark é um framework consolidado que oferece formas de gerenciar e processar Big Data com varias naturezas de dados, como textos ou imagens, e várias origens,  
-como lote ou streaming de dados,  de forma muito compreeendivel. Além de melhorar a performance de aplicações e dar mais produtividade no desenvolvimento
-de aplicações em Java, Scala, R e Python. Posto seu foco no alto desempenho Spark possui uma bibliteca chamada \textbf{MLlib} para Machine Learning a qual 
+como lote ou streaming de dados,  de forma muito compreeendivel. 
+Além de melhorar a performance de aplicações e dar mais produtividade no desenvolvimento
+de aplicações em Java, Scala, R e Python. Com seu foco no alto desempenho Spark possui uma bibliteca chamada \textbf{MLlib} para Machine Learning a qual 
 consiste nos algoritmos de Machine Learning, como classificação, regressão e clustering.
 
-Assim como o Spark o \textbf{Apache Hadoop} nasceu com a necessidade de processar uma grande quantidade de Big Data e tambem é um \textit{software} 
-livre com o código aberto, porém originou-se do framework \textbf{MapReduce} da Google  criado para indexar páginas web, porém foi muito mais além 
-, e é utilizado por industrias das áreas de entreterimento, mercado financeiro, governamentais, saúde, informação e outras. Basicamente ele utilza
-técnicas do MapReduce para consultar dados e dividir e processa-los paralelamente em vários computadores, oque permite processar muito mais dados em menos
+Assim como o Spark o \textbf{Apache Hadoop} nasceu com a necessidade de processar uma grande quantidade de Big Data e também é um \textit{software} 
+livre com o código aberto, originou-se do framework \textbf{MapReduce} da Google criado para indexar páginas web, e foi muito mais além,  
+e é utilizado por industrias das áreas de entreterimento, mercado financeiro, governamentais, saúde, informação e outras. Basicamente ele utiliza
+técnicas do MapReduce para consultar dados e dividir para processá-los paralelamente em vários computadores, isto permite processar muito mais dados em menos
 tempo. Assim como o Hadoop o Spark também estende funcionalidades do MapReduce.
  
 
 \subsection{Principais ferramentas}
 \label{subsec:ferramentas}
-Muitas vezes não é necessáro desenvolver um sitema de machine learning para que se obtenha resultados satisfátórios, pois existem
-ferramentas focadas em automatizar algumas tarefas para fazer \textit{data-mining}, preparar os dados ou visualiza-los de formas mais 
+Muitas vezes não é necessário desenvolver um sitema de machine learning para que se obtenha resultados satisfátórios, pois existem
+ferramentas focadas em automatizar algumas tarefas para preparar os dados ou visualizá-los de formas mais 
 simples, além de ferramentas que facilitam o desenvolvimento de algortimos. Existem muitas empresas muito consolidadas no mercado 
-que fornecem este tipo de ferramenta como a \textbf{IBM}, \textbf{Oracle} e \textbf{SAP}, no entando a comunidade de desenvolvedores
-produzem ótimas ferramentas gratuitas e de código aberto, portanto é aconselhavél que antes de comprar uma ferramenta deste tipo
+que fornecem este tipo de ferramenta como a \textbf{IBM}, \textbf{Oracle} e \textbf{SAP}, no entanto a comunidade de desenvolvedores
+produzem ótimas ferramentas gratuitas e de código aberto, portanto é aconselhável que antes de comprar uma ferramenta deste tipo
 avaliar se as opções gratuitas não atendem as necessidades, sabendo que os produtos proprietários são relativamente caros. Por 
 isto podemos categorizar estas ferramentas como \textbf{pagas} e \textbf{gratuitas}.
 
@@ -122,21 +123,21 @@ E dentre as soluções abertas e gratuitas, algumas das principais são:
 	\item \textbf{RapidMiner}: é um software livre que atende todas as etapas do \textit{workflow} de machine learning, desde a preparação dos dados até 
 	a operacionalização em ambiente de produção, em suma em um único ambiente é possivel melhorar drasticamente a performance e eficiência;
 
-	\item \textbf{Weka}: possui uma coleção de algoritmos de machine learning e estes podem ser aplicados diretamente em um conjunto de dados, tembé permite
-	que aplicações Java utilizem estes algoritmos, também possui ferramentas para preparação dos dados, classificação, regressão, clusterização e visualização.
+	\item \textbf{Weka}: possui uma coleção de algoritmos de machine learning e estes podem ser aplicados diretamente em um conjunto de dados, também permite
+	que aplicações Java utilizem estes algoritmos, possui ferramentas para preparação dos dados, classificação, regressão, clusterização e visualização.
 	Este é um software sobre a licensa \textbf{GNU}(\textit{General Public License}), é uma das licensas de softwares abertos mais permissivas. 
-	Além de possuir uma interface gráfica muito intuitiva que praticamente dispensa a escrita de código, tornando o processo muito mais amigável e
+	Possui uma interface gráfica muito intuitiva que praticamente dispensa a escrita de código, tornando o processo muito mais amigável e
 	convidativo para profissionais de diversas áreas; e
-
-	\item \textbf{Rattle}: sabendo que a linguagem R atende o universo de machine learning muito bem por conta das inumeras bibliotecas, porém 
-	seu desenvolvimento e visualização dos resultados é em console de linha de comando. A ferrementa Rattle possibilita executar os algoritmos
-	em R em uma interface gráfica e visualizar o resultado dos algoritmos gráficamente.	  
+	\item \textbf{Rattle}: possui uma interface gráfica para montar o processo do algoritmo, transformar os dados para serem usados para a construção 
+	de modelos de algoritmos supervisionados e não-supervisionados, identifica e apresenta de forma gráfica a performance dos modelos e possibilita que
+	todo o algoritmo montado apartir de sua interface possa ser exportada em um script \textbf{R}, 
+	podendo ser executado independentemente da interface Rattle.
 \end{alineas}
 
 
 \subsection{Serviços na nuvem}
 \label{subsec:servicos}
-Além de ferramentas e as linguagens de programação existem alguns serviços na nuvem que abstraem muita complexidade de um projeto de machine learning, 
+Existem alguns serviços na nuvem que abstraem muita complexidade de um projeto de machine learning, 
 desde \textbf{API's}\footnote{\textbf{API} é uma interface para programação de aplicações} para processamento dos dados até serviços de infraestrutura como máquinas com grande poder computacional.
 Alguns serviços chegam a oferecer um \textit{setup} interativo que possibilita configurar todo o processo de machine learning em uma interface
 simples e de forma visual, ou seja sem linha de comando ou programação.
@@ -148,9 +149,9 @@ possuem serviços focados em machine learning. São eles:
 
 \begin{alineas}
 	\item \textbf{Amazon Machine Learning} é baseado nas mesmas tecnologias utilizadas e comprovadas pela própria Amazon, uma empresa que sempre teve vários
-	desafios em relação a escalabilidade e performance. Este produto oferce ferramentas para configurar todo o processo de ML de forma simples, não necessitando 
+	desafios em relação a escalabilidade e alto desempenho. Este produto oferce ferramentas para configurar todo o processo de ML de forma simples, não necessitando 
 	de muito conhecimento nos algoritmos complexos de ML, após a conclusão dos modelos o serviço oferece API's simples para obter predições apartir dos modelos gerados.
-	Porem possui alguns recursos que permitem o usuário identificar se os dados possuem erros ou ruídos, como campos vazios com valores inesperados, para que se possa 
+	Porém possui alguns recursos que permitem o usuário identificar se os dados possuem erros ou ruídos, como campos vazios com valores inesperados, para que se possa 
 	garantir a precisão do modelo, além dos algoritmos utilizados estarem preparados para garantir a qualidade dos modelos.       
 	
 	\item \textbf{Azure Machine Learning} oferece praticamente os mesmos recursos que o \textbf{Amazon ML}, 
@@ -158,7 +159,7 @@ possuem serviços focados em machine learning. São eles:
 	A maioria destas API's são focada em uma melhor experiência para os usuáros das aplicações que a consomem, por exemplo  recomendação de alguma ação baseda em 
 	ações passadas.
 
-	\item \textbf{HPE Haven onDemand} é uma plataforma focada em API's altamente escaláveis para atender qualquer tipo apicação sob demanda,
+	\item \textbf{HPE Haven onDemand} é uma plataforma focada em API's com grande disponibilidade para atender qualquer tipo apicação sob demanda,
 	 criado pela \textbf{HP Enterprise} e hospedado na nuvem da \textbf{Microsoft Azure}.    	
 \end{alineas}
 

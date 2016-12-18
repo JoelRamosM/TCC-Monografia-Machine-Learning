@@ -1,7 +1,8 @@
 \section{Como a máquina aprende}
 \label{sec:howdoesmachinelearn}
+O processo básico de aprendizagem de uma máquina ou de um ser humano são bastantes similares, e pode ser dividido em três componentes
+como ilustrado na ~\autoref{fig:processo-aprendizagem}:
 
-O processo básico de aprendizagem de máquina consiste em entrada de dados, abstração e generalização (Figura~\ref{fig:processo-aprendizagem}).
 \begin{alineas}
 	\item Entrada de dados: são fatos tirados da memória ou da observação;
 	\item Abstração: transformar estes dados em algo mais objetivo e que faça sentido; e
@@ -24,8 +25,9 @@ Todo este processo ocorre na ordem apresentada, pois o conceito de abstração e
 \subsection{Abstração e Representação de Dados}
 \label{subsec:abs-representacao-dados}
 
-Durante a abstração os dados de entradas, são preparados para que possuam algum sentido em um contexto.
-Para ilustrar este processo, lembre de quando aprendeu a executar operações de soma e subtração, que sua professora apresentou (Figura ~\ref{fig:exemplo-aprendizagem}).
+Durante a abstração os dados de entradas são preparados para que possuam algum sentido em um contexto.
+Como exemplo para ilustrar o processo de abstração, o ensino de operações de soma para alunos do primário é muito comum que 
+se utilize conceitos conhecidos pelos alunos como mostrado na ~\autoref{fig:exemplo-aprendizagem}.
 
 \begin{figure}[ht!]
 	\centering
@@ -37,8 +39,10 @@ Para ilustrar este processo, lembre de quando aprendeu a executar operações de
 	}	
 \end{figure}
 
-Você ignorou todas as propriedades da maçã como ser uma fruta, ter a cor vermelha  ou possuir sementes, e focou nas propriedades que faziam sentido no contexto, que é a maçã representar uma unidade. Logo uma unidade de um tipo mais outra unidade do mesmo tipo é igual à duas unidades, ou seja para o contexto de soma não importa se é uma fruta ou a cor e sim a unidade. Após o processo de abstração formou-se ideia apresentada na \autoref{fig:exemplo-aprendizagem2}.
-
+Espera-se que os alunos ignorem as propriedades da maçã como ser uma fruta, ter a cor vermelha ou possuir sementes,
+e absorvam o conceito de unidade representado pela maçã. Logo uma unidade de um tipo mais outra unidade do mesmo tipo
+resulta em duas unidades. Ou seja o importante na representação da maçã neste contexto é o conceito de unidade, após 
+o processo de abstração é esperado que os alunos tenham o formado o conceito ilustrado pela \autoref{fig:exemplo-aprendizagem2}.
 
 \begin{figure}[ht!]
 	\centering
@@ -62,32 +66,32 @@ Existem vários tipos de modelos, alguns deles são:
 A escolha do modelo não é feita pelo sistema de aprendizagem, depende do tipo da tarefa \textbf{\textit{T}} e o tipo dos dados
 que estão sendo analisados. A etapa que gera um modelo específico de um conjunto de dados é chamada de treino de dados \textbf{\textit{E}}. 
 Durante o treinamento, os dados são transformado em uma forma abstrata que resume os dados originais, é importante observar que o  
-treino de dados não gera novos dados, muitas vezes após esta etapa nos surpreendemos com as suposições levantadas sobre como 
-estes dados se relacionam. Estas relações identificadas sempre estiveram presente, porém quando se organiza estes dados de outra forma
+treino de dados não gera novos dados, muitas vezes após esta etapa são levantadas suposições inimagináveis sobre como estes dados se relacionam.
+Estas relações identificadas sempre estiveram presente, porém quando se organiza estes dados de outra forma
 é possível identificar estas conexões escondidas.
 
 \subsection{Generalização}
 \label{subsec:generalização-dados}
 
-Até que o sistema possa utilizar o conhecimento abstrato para uma ação futura, o processo de aprendizagem ainda não está concluído.
-O processo de generalização transforma o conhecimento abstrato prévio em um formato que possa ser utilizado para um ação, é um 
-processo difícil de ser descrito, mas pode ser visto como uma busca nos modelos ou teorias geradas no processo de abstração, porém pode existir
-um grande número de modelos disponíveis.
+O processo de generalização é a ultima etapa do processo de aprendizagem, a qual transforma o conhecimento abstrato prévio em um formato que 
+possa ser utilizado para um ação, é um processo difícil de ser descrito, mas pode ser visto como uma busca nos modelos 
+ou teorias geradas no processo de abstração, porém pode existir um grande número de modelos disponíveis.
 
 Dado que exista um grande número de modelos, durante a generalização este número será reduzido de forma qualitativa. 
 Mas não é praticável examinar cada um dos modelos e verificar se atende aos parâmetros, portanto os algoritmos de machine learning utilizam 
-técnicas de busca como heurística para diminuir a área de busca para encontrar os modelos que mais se aproximam do esperado.
+técnicas de pesquisa como heurística para reduzir o tempo de pesquisa, para encontrar os modelos que mais se aproximam do esperado.
 Segundo \cite{heuristica}:
 \begin{citacao}
-A pesquisa por heurísticas é uma pesquisa realizada por meio da quantificação de proximidade a um determinado objetivo. 
-Diz-se que se tem uma boa (ou alta) heurística se o objeto de avaliação está muito próximo do objetivo; diz-se de má (ou baixa) heurística 
-se o objeto avaliado estiver muito longe do objetivo. 
-Etimologicamente a palavra heurística vem da palavra grega Heuriskein, que significa descobrir (e que deu origem também ao termo Eureca).
+Para resolver eficientemente muitos problemas difíceis, geralmente é
+necessário comprometer as exigências de mobilidade e sistematicidade e
+construir uma estrutura de controle que não garanta encontrar a melhor
+resposta, mas que quase sempre encontre uma resposta muito boa. ... a
+heurística é uma técnica que melhora a eficiência de um processo de
+busca, possivelmente sacrificando pretensões de completeza. 
 \end{citacao} 
 
 
-Porém como a heurística trabalha com proximidade, não há garantias de que os melhores modelos serão escolhidos, 
-no entanto é impraticável realizar esta pesquisa sem utilizar está técnica.
+Porém como a heurística trabalha com proximidade, não há garantias de que os melhores modelos serão escolhidos.
 
 \subsubsection{Avaliando o sucesso da aprendizagem}
 \label{subsec:avaliando-generalização-dados}
@@ -108,17 +112,18 @@ se diferenciam da tendência e entre si. Neste caso conseguimos ter dois parâme
 \end{alineas}   
 
 Matematicamente, se nossa função real é \textit{Y = f(X) + E}, e queremos estimar um modelo \textit{h(x)} que aproxima a função \textit{f(x)},
-o bias (1) e a variância (2) serão, respectivamente na (Figura~\ref{fig:bias-func}).
+o bias e a variância serão, respectivamente:
 
-\begin{figure}[ht!]
-	\centering
-	\Caption{\label{fig:bias-func} Modelo matemático: Bias e Variância}	
-	\UECEfig{}{
-		\fbox{\includegraphics[width=10cm]{figuras/bias-variance}}
-	}{
-		\Fonte{https://ericcouto.wordpress.com/2013/06/29/bias-vs-variancia-parte-1 (2013).}		
-	}	
-\end{figure}
+\begin{equation}
+	\begin{aligned}
+ 			E\left [ \bar{h}(x)- f(x) \right  ]
+	\end{aligned}	
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+ 			E\left [ (\bar{h}(x)- h(x) \right)^2 ]
+	\end{aligned}
+\end{equation}
 
 A última etapa da generalização é determinar o sucesso dos modelos, depois de treinado com os dados iniciais
 o modelo é testado com novos dados e avaliado como o processo de generalização se comporta, é importante saber que é extremamente raro
