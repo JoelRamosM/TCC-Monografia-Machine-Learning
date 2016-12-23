@@ -1069,9 +1069,13 @@
 }
 
 \newcommand{\imprimirresumo}[1]{ %
-	\begin{resumo} %				
-		\input{#1} %
-	\end{resumo} %
+		\begin{center}%
+			\textbf{RESUMO} %
+		\end{center} %
+		\begin{singlespacing}     
+			\input{#1} %	
+		\end{singlespacing}
+
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1079,9 +1083,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\imprimirabstract}[1]{ %
-	\begin{resumo}[Abstract] %
-		\input{#1} %
-	\end{resumo} %
+	\begin{center}%
+			\textbf{ABSTRACT} %
+		\end{center} %
+		\begin{singlespacing}     
+			\input{#1} %	
+		\end{singlespacing}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
